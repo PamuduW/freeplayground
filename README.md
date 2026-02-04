@@ -1,6 +1,6 @@
 # FreePlayground
 
-[![pipeline status](PASTE_GITLAB_BADGE_IMAGE_URL_HERE)](PASTE_GITLAB_BADGE_LINK_URL_HERE)
+[![pipeline status](https://gitlab.com/PamuduW/freeplayground/badges/main/pipeline.svg)](https://gitlab.com/PamuduW/freeplayground/-/pipelines)
 
 FreePlayground is my public engineering lab notebook and proof-of-work repo.
 
