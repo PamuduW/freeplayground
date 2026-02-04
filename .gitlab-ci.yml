@@ -1,0 +1,8 @@
+stages: [smoke]
+
+smoke:
+  stage: smoke
+  image: alpine:3.20
+  script:
+    - echo "CI is alive."
+    - uname -a
