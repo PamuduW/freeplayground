@@ -47,5 +47,4 @@ Each week ends with a shippable outcome: a commit, documentation, and repeatable
 
 ## CI badge setup
 
-This repo uses a GitLab pipeline badge so the build health is visible at a glance. GitLab documents pipeline status badges and how to add them.  
-Add the badge URLs above after your first green pipeline run.
+This repo uses a GitLab pipeline badge so the build health is visible at a glance. See the start of this README.md file to see the active badge.  

@@ -1,0 +1,48 @@
+# OS junk
+.DS_Store
+Thumbs.db
+
+# Editor/IDE
+.idea/
+*.swp
+*.swo
+.vscode/*
+!.vscode/extensions.json
+!.vscode/settings.json
+
+# Logs
+*.log
+
+# Secrets (track .env.example, ignore real env files)
+.env
+.env.*
+!.env.example
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+
+# Node
+node_modules/
+
+# Terraform
+.terraform/
+*.tfstate
+*.tfstate.*
+crash.log
+override.tf
+override.tf.json
+*_override.tf
+*_override.tf.json
+.terraform.lock.hcl
+
+# Kubernetes local config files
+kubeconfig
+*.kubeconfig
+
+# Build outputs
+dist/
+build/
+out/
