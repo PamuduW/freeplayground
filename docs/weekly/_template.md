@@ -1,4 +1,4 @@
-# Week XX (YYYY-MM-DD → YYYY-MM-DD) — <Theme>
+# Week XX - <Theme>
 
 ## Goal
 One sentence: what “done” looks like this week.

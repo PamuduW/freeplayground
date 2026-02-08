@@ -7,7 +7,6 @@ FreePlayground is my public engineering lab notebook and proof-of-work repo.
 It captures weekly progress across DevOps fundamentals, cloud, automation, and security, plus the projects and experiments I build along the way.
 
 ## What you will find here
-
 ### 1) DevOps foundations
 Linux, Git workflows, containers, CI/CD, infrastructure hygiene.
 
@@ -24,7 +23,6 @@ Small tools and scripts (Bash and Python) that solve real problems and reduce ma
 Each week ends with a shippable outcome: a commit, documentation, and repeatable steps.
 
 ## Repo map
-
 - `docs/weekly/` - weekly notes and progress receipts
 - `01-foundations/` - Linux, networking basics, scripting notes
 - `02-docker/` - Docker labs and Compose demos
@@ -36,15 +34,12 @@ Each week ends with a shippable outcome: a commit, documentation, and repeatable
 - `10-automation-scripts/` - reusable scripts and mini tools
 
 ## Weekly log
-
 - [Week 01](docs/weekly/week-01.md)
 
 ## How I work
-
 - WSL-first workflow: development and tooling run inside Linux (WSL).
 - Progress is quota-based: finish the weekly deliverable, not “work every day”.
 - Plan is dynamic, goals are fixed: scope can change, outcomes stay the same.
 
 ## CI badge setup
-
 This repo uses a GitLab pipeline badge so the build health is visible at a glance. See the start of this README.md file to see the active badge.  

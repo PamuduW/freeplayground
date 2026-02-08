@@ -15,7 +15,7 @@ Set up FreePlayground as a long-term engineering growth repo with working CI, cl
 
 ## Stretch (nice to have)
 - [x] Cost guardrails checked (AWS + Azure)
-- [ ] Add repo description and topics, then pin the repo on GitHub and GitLab
+- [x] Add repo description and topics, then pin the repo on GitHub and GitLab
 
 ## What I did (short log)
 - Initialized the repo inside WSL and set Git identity.
@@ -31,8 +31,10 @@ Set up FreePlayground as a long-term engineering growth repo with working CI, cl
 - Budgets created:
   - My_Monthly_Cost_Budget ($5)
   - My_Zero-Spend_Budget ($0.01 tripwire)
+
 - Cost Anomaly Detection:
   - Alert subscription active
+
 - Billing alerts:
   - Free tier alerts enabled
   - Billing alerts enabled
@@ -40,8 +42,10 @@ Set up FreePlayground as a long-term engineering growth repo with working CI, cl
 ### Azure
 - Budget created:
   - zero_spent ($1 monthly tripwire)
+
 - Subscription:
   - Azure for Students is active
+
 - Credits:
   - Student credits visible (acts as a hard safety buffer)
 
