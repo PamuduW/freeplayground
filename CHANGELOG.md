@@ -15,6 +15,6 @@ The format is based on Keep a Changelog, and this project follows SemVer where r
 ### Fixed
 - N/A
 
-## [0.1.0] - 2026-02-08
+## [0.1.0]
 ### Added
 - Initial public lab notebook structure
