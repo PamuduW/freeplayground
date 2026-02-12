@@ -46,3 +46,9 @@ kubeconfig
 dist/
 build/
 out/
+
+# oops-prevention
+*.tfvars
+*.pem
+*.key
+*.pfx

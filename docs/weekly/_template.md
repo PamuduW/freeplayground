@@ -38,7 +38,10 @@ One sentence: what “done” looks like this week.
 
 ## Retro
 - Went well:
+  - 
 
 - Needs improvement:
+  - 
 
 - Next week adjustment (scope can change, outcome stays):
+  - 
