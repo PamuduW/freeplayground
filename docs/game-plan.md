@@ -6,9 +6,16 @@ The goal is consistent growth across DevOps fundamentals, cloud, automation, and
 
 ## Principles
 - WSL-first workflow: projects live in the Linux filesystem and tooling runs inside WSL.
-- Quota-based progress: finish the weekly deliverable, not “work every day”.
+- Quota-based progress: finish the weekly deliverable, not "work every day".
 - Dynamic plan, fixed outcomes: scope can change, outcomes stay the same.
 - Slip rule: if work slips, it can roll forward, but not by more than 2 weeks without rebalancing scope.
+
+## Weekly Git workflow (branch-per-week)
+- I create a new branch for each week: `week/NN-short-theme` (for example: `week/02-docker`).
+- I open a Draft merge request to `main` at the start of the week, and push commits to the week branch as work progresses.
+- At the end of the week, I merge the MR into `main` using a **merge commit** (so the full week history stays visible on `main`).
+- I delete the week branch after merge to keep the branch list clean.
+- Optional: I add a lightweight tag `week-NN` on the merge commit so each week is easy to locate later.
 
 ## Success outcomes (end of 12 months)
 By the end of this plan, this repo should demonstrate:
@@ -32,11 +39,11 @@ Template:
 
 ## Plan document (source of truth)
 The detailed 12-month weekly plan lives in the project files for this ChatGPT workspace:
-- "Pamudu Dev Sec Ops Game Plan (weekly, 12 Months).docx"
-- "Pamudu Dev Sec Ops Game Plan (weekly, 12 Months).pdf"
+- `FreePlayground_Game_Plan_v3.docx`
+- `FreePlayground_Game_Plan_v3.pdf`
 
-This `docs/game-plan.md` file is the living index and will be updated if the plan is adjusted.
+This `game-plan.md` file is the living index and will be updated if the plan is adjusted.
 
 ## Current status
 - Week 01: repo initialized, CI scaffold created, mirroring enabled, weekly notes started
-- Next: complete cloud cost guardrails (AWS + Azure), then begin Week 02
+- Next: Week 02 in branch `week/02-docker`

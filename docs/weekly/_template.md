@@ -1,7 +1,7 @@
 # Week XX - <Theme>
 
 ## Goal
-One sentence: what “done” looks like this week.
+One sentence: what "done" looks like this week.
 
 ## Must ship (definition of done)
 - [ ] Item 1
@@ -32,7 +32,9 @@ One sentence: what “done” looks like this week.
   - GitHub: <link>
   - GitLab: <link>
   - Pipeline: <link>
-  - MR/PR (if any): <link>
+  - Branch: week/XX-short-theme
+  - MR: <link>
+  - Tag (optional): week-XX
 
 - Screenshots:
 

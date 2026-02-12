@@ -40,8 +40,13 @@ Each week ends with a shippable outcome: a commit, documentation, and repeatable
 
 ## How I work
 - WSL-first workflow: development and tooling run inside Linux (WSL).
-- Progress is quota-based: finish the weekly deliverable, not “work every day”.
+- Progress is quota-based: finish the weekly deliverable, not "work every day".
 - Plan is dynamic, goals are fixed: scope can change, outcomes stay the same.
 
+## Weekly Git workflow
+- I create a week branch: `week/NN-short-theme`.
+- I open a Draft merge request to `main` at the start of the week.
+- I merge to `main` at the end of the week using a merge commit, then delete the week branch.
+
 ## CI badge setup
-This repo uses a GitLab pipeline badge so the build health is visible at a glance. See the start of this README.md file to see the active badge.  
+This repo uses a GitLab pipeline badge so the build health is visible at a glance. See the start of this README.md file to see the active badge.
