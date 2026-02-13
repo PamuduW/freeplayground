@@ -36,8 +36,8 @@ Each week ends with a shippable outcome: a commit, documentation, and repeatable
 - `10-automation-scripts/` - reusable scripts and mini tools
 
 ## Weekly log
-- [Week 01](docs/weekly/weeks/week-01.md)
-- [Week 02](docs/weekly/weeks/week-02.md)
+- [Week 01](docs/weekly/week-01.md)
+- [Week 02](docs/weekly/week-02.md)
 
 ## How I work
 - WSL-first workflow: development and tooling run inside Linux (WSL).

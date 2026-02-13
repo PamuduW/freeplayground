@@ -32,10 +32,10 @@ Every week ships:
 3) A short retro (what worked, what to improve)
 
 Weekly notes live in:
-- `docs/weekly/weeks/week-XX.md`
+- `docs/weekly/week-XX.md`
 
 Template:
-- `docs/weekly/info/_template.md`
+- `docs/info/_template.md`
 
 This `game-plan.md` file is the living index and will be updated if the plan is adjusted.
 
