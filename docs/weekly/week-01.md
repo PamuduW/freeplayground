@@ -79,8 +79,8 @@ git push -u github main
 
 - Screenshots:
    
-  ![GitHub README badge and repo](images/week-01-img-01.png)
-  ![GitLab mirroring success](images/week-01-img-02.png)
+  ![GitHub README badge and repo](../images/week-01-img-01.png)
+  ![GitLab mirroring success](../images/week-01-img-02.png)
 
 ## Retro
 - Went well:
