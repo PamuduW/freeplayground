@@ -36,6 +36,7 @@ Each week ends with a shippable outcome: a commit, documentation, and repeatable
 
 ## Weekly log
 - [Week 01](docs/weekly/week-01.md)
+- [Week 01-1 (linting/formatting add-on)](docs/weekly/week-01-1.md)
 - [Week 02](docs/weekly/week-02.md)
 
 ## How I work
@@ -52,6 +53,7 @@ Each week ends with a shippable outcome: a commit, documentation, and repeatable
 - I run `make hooks` once after cloning to install commit hooks.
 - I run `make qa` before pushing or opening merge requests.
 - `pre-commit` runs automatically on each commit.
+- I keep the quality setup details in `docs/info/linting-formatting-workflow.md`.
 
 ## CI badge setup
 This repo uses a GitLab pipeline badge so the build health is visible at a glance. See the start of this README.md file to see the active badge.

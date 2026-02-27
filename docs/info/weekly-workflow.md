@@ -28,6 +28,7 @@ git push
 ```
 
 I run `make qa` during the week before I push so my branch stays lint-clean.
+I keep the quality workflow reference in `docs/info/linting-formatting-workflow.md`.
 
 ## End of week (merge + clean up)
 1. Ensure the "must ship" checklist is complete and `docs/weekly/week-NN.md` has evidence.
