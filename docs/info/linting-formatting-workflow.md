@@ -25,7 +25,8 @@ make qa-full
 - Manual only: Dockerfile linting with hadolint.
 
 ## CI/CD pipeline scope
-- CI pipeline focuses on CI/CD flow (`verify -> build -> deploy`) and not linting/formatting.
+- Current CI pipeline is a minimal verify baseline and does not include package/deploy jobs yet.
+- Package/deploy work is planned in later CI-focused weeks in `docs/info/FreePlayground_Game_Plan_v3.md`.
 - Linting and formatting are enforced locally by `make qa` and commit hooks.
 
 ## Manual hadolint run

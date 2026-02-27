@@ -159,8 +159,8 @@ A weekly proof-of-work path toward DevOps -> Kubernetes -> CI mastery -> DevSecO
 ### Week 09 - CI baseline
 **Must ship**
 
-- .gitlab-ci.yml with stages: lint/test → build → package.
-- Artifact retention configured.
+- .gitlab-ci.yml baseline pipeline running on push/MR (verify/lint-test jobs).
+- Clear job naming + logs are readable.
 
 **Stretch**
 
@@ -171,11 +171,12 @@ A weekly proof-of-work path toward DevOps -> Kubernetes -> CI mastery -> DevSecO
 ### Week 10 - CI improvements
 **Must ship**
 
-- Caching + faster pipeline.
-- Clear job naming + logs are readable.
+- Add package stage/job that creates a release artifact bundle.
+- Artifact retention configured.
 
 **Stretch**
 
+- Caching + faster pipeline.
 - Add rules/only/except equivalent (pipeline rules) for branches/MRs.
 
 **Proof to capture:** links, screenshots, commands, and a short retro in docs/weekly/week-10.md.
@@ -189,6 +190,7 @@ A weekly proof-of-work path toward DevOps -> Kubernetes -> CI mastery -> DevSecO
 **Stretch**
 
 - Add image tagging strategy (commit SHA + semver).
+- Add deploy stage/job with manual gate on `main` (start as placeholder, then connect to real target later).
 
 **Proof to capture:** links, screenshots, commands, and a short retro in docs/weekly/week-11.md.
 

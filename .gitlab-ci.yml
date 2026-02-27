@@ -1,7 +1,4 @@
-stages: [verify, build, deploy]
-
-variables:
-  RELEASE_BUNDLE: "freeplayground-${CI_COMMIT_SHORT_SHA}.tgz"
+stages: [verify]
 
 smoke:
   stage: verify
@@ -10,29 +7,3 @@ smoke:
     - echo "CI is alive."
     - 'echo "Ref: ${CI_COMMIT_REF_NAME}"'
     - uname -a
-
-package:
-  stage: build
-  image: alpine:3.20
-  script:
-    - tar -czf "${RELEASE_BUNDLE}" README.md CHANGELOG.md AGENTS.md .gitlab-ci.yml docs 02-docker tools
-    - ls -lh "${RELEASE_BUNDLE}"
-  artifacts:
-    name: "${CI_PROJECT_NAME}-${CI_COMMIT_SHORT_SHA}"
-    paths:
-      - "${RELEASE_BUNDLE}"
-    expire_in: 1 week
-
-deploy:
-  stage: deploy
-  image: alpine:3.20
-  needs: [package]
-  rules:
-    - if: '$CI_COMMIT_BRANCH == "main"'
-      when: manual
-    - when: never
-  script:
-    - echo "Manual deploy gate reached for ${CI_COMMIT_REF_NAME}."
-    - echo "Replace this step with real deployment commands when infrastructure is ready."
-  environment:
-    name: production
