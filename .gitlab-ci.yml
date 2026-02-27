@@ -8,7 +8,7 @@ smoke:
   image: alpine:3.20
   script:
     - echo "CI is alive."
-    - echo "Ref: ${CI_COMMIT_REF_NAME}"
+    - 'echo "Ref: ${CI_COMMIT_REF_NAME}"'
     - uname -a
 
 package:
