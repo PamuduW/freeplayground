@@ -8,7 +8,7 @@ The goal is consistent growth across DevOps fundamentals, cloud, automation, and
 - Quota-based progress: I finish the weekly deliverable, not "work every day".
 - Dynamic plan, fixed outcomes: scope can change, outcomes stay the same.
 - Slip rule: if work slips, it can roll forward, but not by more than 2 weeks without rebalancing scope.
-- Quality baseline: I run `make qa` before push and keep pre-commit enforced in CI.
+- Quality baseline: I run `make qa` before push and keep linting/formatting enforced locally via pre-commit.
 
 ## Weekly Git workflow (branch-per-week)
 - I create a new branch for each week: `week/NN-short-theme` (for example: `week/02-docker`).

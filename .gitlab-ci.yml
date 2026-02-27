@@ -1,31 +1,38 @@
-stages: [smoke, lint]
+stages: [verify, build, deploy]
+
+variables:
+  RELEASE_BUNDLE: "freeplayground-${CI_COMMIT_SHORT_SHA}.tgz"
 
 smoke:
-  stage: smoke
+  stage: verify
   image: alpine:3.20
   script:
     - echo "CI is alive."
+    - echo "Ref: ${CI_COMMIT_REF_NAME}"
     - uname -a
 
-lint:
-  stage: lint
-  image: python:3.12-slim
-  variables:
-    DEBIAN_FRONTEND: "noninteractive"
-    PRE_COMMIT_HOME: "$CI_PROJECT_DIR/.cache/pre-commit"
-    PIP_CACHE_DIR: "$CI_PROJECT_DIR/.cache/pip"
-    PIP_DISABLE_PIP_VERSION_CHECK: "1"
-    PIP_ROOT_USER_ACTION: "ignore"
-  cache:
-    key:
-      files:
-        - .pre-commit-config.yaml
-    paths:
-      - .cache/pre-commit
-      - .cache/pip
+package:
+  stage: build
+  image: alpine:3.20
   script:
-    - apt-get -qq update >/dev/null
-    - apt-get -qq install -y --no-install-recommends git ca-certificates libatomic1 >/dev/null
-    - rm -rf /var/lib/apt/lists/*
-    - python -m pip install --quiet --no-cache-dir pre-commit
-    - python -m pre_commit run --all-files --show-diff-on-failure
+    - tar -czf "${RELEASE_BUNDLE}" README.md CHANGELOG.md AGENTS.md .gitlab-ci.yml docs 02-docker tools
+    - ls -lh "${RELEASE_BUNDLE}"
+  artifacts:
+    name: "${CI_PROJECT_NAME}-${CI_COMMIT_SHORT_SHA}"
+    paths:
+      - "${RELEASE_BUNDLE}"
+    expire_in: 1 week
+
+deploy:
+  stage: deploy
+  image: alpine:3.20
+  needs: [package]
+  rules:
+    - if: '$CI_COMMIT_BRANCH == "main"'
+      when: manual
+    - when: never
+  script:
+    - echo "Manual deploy gate reached for ${CI_COMMIT_REF_NAME}."
+    - echo "Replace this step with real deployment commands when infrastructure is ready."
+  environment:
+    name: production

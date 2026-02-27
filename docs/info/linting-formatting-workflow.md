@@ -1,10 +1,10 @@
 # Linting and formatting workflow
-This repo uses `pre-commit` as the single quality runner for local commits and CI.
+This repo uses `pre-commit` as the single local quality runner before I commit and push.
 
 ## Why I set it up
 - I want one reliable command to auto-fix and verify quality before push.
 - I want consistent formatting and linting across Python, Shell, YAML, Dockerfiles, and Markdown.
-- I want CI to enforce the same baseline as local runs.
+- I want linting and formatting to stay local, while CI focuses on CI/CD flow.
 
 ## Core commands
 ```bash
@@ -17,13 +17,16 @@ make qa-full
 ## What each command does
 - `make hooks`: installs the git pre-commit hook and prepares hook environments.
 - `make qa`: refreshes `docs/info/tree.md` via `tools/update-tree.sh`, runs all hooks across all files, allows auto-fixes on pass 1, then re-runs on pass 2 to confirm clean.
-- `make hado`: runs the manual-stage hadolint hook across Dockerfiles.
-- `make qaf`: runs `make qa` and then `make hadolint`.
+- `make hadolint`: runs the manual-stage hadolint hook across Dockerfiles.
+- `make qa-full`: runs `make qa` and then `make hadolint`.
 
 ## What runs automatically
 - On commit: pre-commit runs the configured hooks for changed files.
-- On CI (`lint` job): pre-commit runs against all files.
 - Manual only: Dockerfile linting with hadolint.
+
+## CI/CD pipeline scope
+- CI pipeline focuses on CI/CD flow (`verify -> build -> deploy`) and not linting/formatting.
+- Linting and formatting are enforced locally by `make qa` and commit hooks.
 
 ## Manual hadolint run
 ```bash

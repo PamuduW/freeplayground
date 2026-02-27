@@ -1,11 +1,11 @@
 # Week 02 Add-on 01 - Linting and formatting baseline
 ## Goal
-Ship a portfolio-grade linting and formatting workflow with one local command and CI enforcement.
+Ship a portfolio-grade linting and formatting workflow with one local command, while keeping CI focused on CI/CD flow.
 
 ## Must ship (definition of done)
 - [x] Add pre-commit as my single local quality runner.
 - [x] Add `make hooks` and `make qa` workflow.
-- [x] Add GitLab lint job that runs pre-commit over all files.
+- [x] Keep linting and formatting local via pre-commit and make targets.
 - [x] Add local quality config files for Ruff, YAML, Markdown, and Prettier.
 - [x] Add a quality workflow guide in `docs/info/`.
 
@@ -18,7 +18,7 @@ Ship a portfolio-grade linting and formatting workflow with one local command an
 - I configured `.pre-commit-config.yaml` for hygiene, Python, shell, YAML, Markdown, and Docker checks.
 - I added tool configs in repo root and documented the workflow in README and info docs.
 - I added `tools/quality/strip_md_heading_blank_lines.py` and wired it into pre-commit.
-- I verified `make qa` and manual hadolint runs.
+- I verified `make qa`, `make hadolint`, and `make qa-full` runs.
 
 ## What I learned
 - A two-pass `make qa` pattern gives me reliable auto-fix + clean verification.
@@ -50,7 +50,7 @@ make qa
 ## Retro
 ### Went well
 - One-command quality checks reduced pre-push friction.
-- CI now enforces the same quality baseline as local runs.
+- Keeping linting local removed CI runner dependency issues for formatting hooks.
 
 ### Needs improvement
 - I should capture evidence links and screenshots at the time I run checks.
