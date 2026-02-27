@@ -9,6 +9,10 @@ This is my proof-of-work lab repo for DevSecOps / Cloud Security learning and ho
 - Weeks are tracked by number only (Week 01, Week 02, ...). A week starts Monday and ends Sunday. No real dates in weekly logs.
 - In repo docs (README, weekly logs), I write in first person (me/my/mine) and avoid second person (you/your).
 - I merge into main using merge commits (no squash).
+- When repo behavior or structure changes, I update all necessary related docs/files in the same change set (README files, AGENTS.md, workflow docs, and other impacted docs).
+- I use `docs/info/tree.md` as a quick structure reference file when planning and reviewing changes.
+- I write module technical README files in a detailed technical style with commands, flag/action explanations, and troubleshooting notes.
+- Each technical module keeps its own local docs under `<module>/info/` (for example: `02-docker/info/`), and the module README links to those files.
 
 ## Weekly Git workflow (branch-per-week)
 - Each week has its own branch: `week/NN-short-theme` (example: `week/03-docker-compose`).
@@ -22,12 +26,16 @@ This is my proof-of-work lab repo for DevSecOps / Cloud Security learning and ho
 ## Where to log work
 - Weekly logs live under `docs/weekly/week-XX.md`.
 - Weekly evidence images live under `docs/weekly/images/week-XX/` with week-based naming.
+- Repo-level reference docs live under `docs/info/`.
+- Module-level reference docs live under each module's `info/` folder.
 
 ## How I want changes made
 - Plan first. Before opening files, I list up to 3 files I need and why.
 - I use `rg` for discovery and open only relevant file sections.
 - I keep diffs small and easy to review.
 - I update documentation alongside behavior changes.
+- I explicitly mention impacted file paths when changes affect workflows, structure, or runbooks.
+- I reference key files where relevant (for example: `docs/info/tree.md` for structure and `docs/info/*.md` for workflows/rules).
 - I avoid scanning large binaries (PDFs/images) unless explicitly requested.
 - I do not want agents to commit changes when work is done; I review and commit the changes myself after review.
 
@@ -39,6 +47,7 @@ This is my proof-of-work lab repo for DevSecOps / Cloud Security learning and ho
 - I use `/status` to confirm the workspace root, writable roots, and token usage.
 - I use `/debug-config` if expected rules or config do not seem to be applied.
 - I use `/compact` after long sessions to keep context lean.
+- I check `docs/info/tree.md` for a quick view of the current folder structure before planning larger edits.
 
 ## Teardown discipline (cloud labs)
 - After any cloud lab, I verify resources are deleted and cost impact is 0.

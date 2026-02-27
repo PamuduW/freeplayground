@@ -24,6 +24,8 @@ Each week ends with a shippable outcome: a commit, documentation, and repeatable
 ## Repo map
 - `docs/weekly/` - weekly notes and progress receipts
 - `02-docker/` - Docker labs and Compose demos
+- `*/info/` - module-specific notes and runbooks (for example: `02-docker/info/`)
+- `docs/info/tree.md` - latest quick snapshot of repo folder structure
 
 ## Planned modules
 - `01-foundations/` - Linux, networking basics, scripting notes
@@ -43,6 +45,7 @@ Each week ends with a shippable outcome: a commit, documentation, and repeatable
 - WSL-first workflow: development and tooling run inside Linux (WSL).
 - Progress is quota-based: finish the weekly deliverable, not "work every day".
 - Plan is dynamic, goals are fixed: scope can change, outcomes stay the same.
+- Module technical README files are written in a detailed style (commands, actions, and troubleshooting).
 
 ## Weekly Git workflow
 - I create a week branch: `week/NN-short-theme`.
