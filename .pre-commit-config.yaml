@@ -1,0 +1,67 @@
+default_stages: [pre-commit]
+
+repos:
+  - repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v4.6.0
+    hooks:
+      - id: trailing-whitespace
+      - id: end-of-file-fixer
+      - id: check-merge-conflict
+      - id: check-yaml
+      - id: check-added-large-files
+        args: [--maxkb=1024]
+      - id: detect-private-key
+
+  - repo: https://github.com/astral-sh/ruff-pre-commit
+    rev: v0.6.9
+    hooks:
+      - id: ruff
+        args: [--fix]
+      - id: ruff-format
+
+  - repo: https://github.com/scop/pre-commit-shfmt
+    rev: v3.8.0-1
+    hooks:
+      - id: shfmt
+
+  - repo: https://github.com/koalaman/shellcheck-precommit
+    rev: v0.10.0
+    hooks:
+      - id: shellcheck
+
+  - repo: https://github.com/adrienverge/yamllint.git
+    rev: v1.35.1
+    hooks:
+      - id: yamllint
+        args: [-c, .yamllint]
+
+  - repo: https://github.com/DavidAnson/markdownlint-cli2
+    rev: v0.14.0
+    hooks:
+      - id: markdownlint-cli2
+        pass_filenames: false
+        args: [--config, .markdownlint-cli2.yaml]
+
+  - repo: local
+    hooks:
+      - id: prettier
+        name: prettier
+        language: node
+        entry: prettier
+        args: [--write]
+        files: \.(ya?ml|json)$
+        additional_dependencies:
+          - prettier@3.3.3
+
+      - id: strip-md-heading-blank-lines
+        name: strip markdown heading blank lines
+        language: system
+        entry: python3 10-automation-scripts/quality/strip_md_heading_blank_lines.py
+        files: \.md$
+
+      - id: hadolint
+        name: hadolint
+        language: docker_image
+        entry: hadolint/hadolint:v2.12.0 hadolint
+        stages: [manual]
+        files: (^|/)([Dd]ockerfile|[Dd]ockerfile\..*)$

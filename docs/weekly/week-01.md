@@ -1,5 +1,4 @@
 # Week 01 - Kickoff and setup
-
 ## Goal
 Set up FreePlayground as a long-term engineering growth repo with working CI, clean structure, and a repeatable weekly shipping format.
 
@@ -29,10 +28,12 @@ Set up FreePlayground as a long-term engineering growth repo with working CI, cl
 ## Cost guardrails (what is set)
 ### AWS
 - Budgets created:
+
   - My_Monthly_Cost_Budget ($5)
   - My_Zero-Spend_Budget ($0.01 tripwire)
 
 - Cost Anomaly Detection:
+
   - Alert subscription active
 
 - Billing alerts:
@@ -41,9 +42,11 @@ Set up FreePlayground as a long-term engineering growth repo with working CI, cl
 
 ### Azure
 - Budget created:
+
   - zero_spent ($1 monthly tripwire)
 
 - Subscription:
+
   - Azure for Students is active
 
 - Credits:
@@ -73,22 +76,24 @@ git push -u github main
 
 ## Evidence (links + screenshots)
 - Links:
+
   - GitHub: https://github.com/PamuduW/freeplayground
   - GitLab: https://gitlab.com/PamuduW/freeplayground
   - Pipelines: https://gitlab.com/PamuduW/freeplayground/-/pipelines
 
 - Screenshots:
-   
-  ![GitHub README badge and repo](images/week-01-img-01.png)
-  ![GitLab mirroring success](images/week-01-img-02.png)
+  ![GitHub README badge and repo](images/week-01/week-01-img-01.png)
+  ![GitLab mirroring success](images/week-01/week-01-img-02.png)
 
 ## Retro
 - Went well:
+
   - Shipping the scaffold fast made the repo feel real immediately.
   - CI + badge makes progress visible and keeps me honest.
   - Cost guardrails were set early, which protects future labs.
 
 - Needs improvement:
+
   - Add repo metadata (description + topics) and pin it, so it presents well as a portfolio project.
 
 - Next week adjustment (scope can change, outcome stays):

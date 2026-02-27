@@ -23,9 +23,16 @@ __pycache__/
 *.py[cod]
 .venv/
 venv/
+env/
+.ruff_cache/
 
 # Node
 node_modules/
+
+# Tool caches
+.cache/pre-commit/
+.cache/pip/
+.pre-commit-cache/
 
 # Terraform
 .terraform/

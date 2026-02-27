@@ -1,14 +1,17 @@
 # FreePlayground Game Plan (12 months)
-
 This repo is my public engineering lab notebook and proof-of-work log.
 
-The goal is consistent growth across DevOps fundamentals, cloud, automation, and security, resulting in a portfolio I can show confidently in interviews.
+The goal is consistent growth across DevOps fundamentals, cloud, automation, and security, resulting in a portfolio of practical, reviewable technical work.
 
 ## Principles
 - WSL-first workflow: projects live in the Linux filesystem and tooling runs inside WSL.
-- Quota-based progress: finish the weekly deliverable, not "work every day".
+- Quota-based progress: I finish the weekly deliverable, not "work every day".
 - Dynamic plan, fixed outcomes: scope can change, outcomes stay the same.
 - Slip rule: if work slips, it can roll forward, but not by more than 2 weeks without rebalancing scope.
+- Quality baseline: I run `make qa` before push and keep linting/formatting enforced locally via pre-commit.
+- Documentation sync baseline: when I change behavior or structure, I update related docs in the same change.
+- Technical docs baseline: module technical README files are detailed notes with command/action explanations and troubleshooting points.
+- Module docs baseline: each technical module uses a local `info/` folder for focused notes/runbooks instead of putting everything in a single README.
 
 ## Weekly Git workflow (branch-per-week)
 - I create a new branch for each week: `week/NN-short-theme` (for example: `week/02-docker`).
@@ -27,23 +30,31 @@ By the end of this plan, this repo should demonstrate:
 
 ## Weekly cadence
 Every week ships:
-1) A deliverable (doc, lab, script, pipeline, diagram, or mini-project)
-2) Evidence (screenshots, links, outputs)
-3) A short retro (what worked, what to improve)
+1. A deliverable (doc, lab, script, pipeline, diagram, or mini-project)
+2. Evidence (screenshots, links, outputs)
+3. A short retro (what worked, what to improve)
 
 Weekly notes live in:
 - `docs/weekly/week-XX.md`
+- `docs/info/tree.md` (quick current folder structure snapshot)
+
+Reference docs live in:
+- `docs/info/`
+- `<module>/info/` for module-specific notes (for example: `02-docker/info/`)
+
+Module placement rules:
+- Reusable scripts and helpers live under `10-automation-scripts/`.
 
 Template:
-- `docs/weekly/_template.md`
+- `docs/info/_template.md`
+- `docs/info/linting-formatting-workflow.md` (quality workflow reference)
 
 ## Plan document (source of truth)
-The detailed 12-month weekly plan lives in the project files for this ChatGPT workspace:
-- `FreePlayground_Game_Plan_v3.docx`
-- `FreePlayground_Game_Plan_v3.pdf`
+The detailed 12-month weekly plan lives here:
+- `docs/info/FreePlayground_Game_Plan_v3.md`
 
 This `game-plan.md` file is the living index and will be updated if the plan is adjusted.
 
 ## Current status
-- Week 01: repo initialized, CI scaffold created, mirroring enabled, weekly notes started
-- Next: Week 02 in branch `week/02-docker`
+- Logs exist for Week 01 and Week 02 under `docs/weekly/`.
+- Next planned: Week 03 (Docker Compose), per `docs/info/FreePlayground_Game_Plan_v3.md`.

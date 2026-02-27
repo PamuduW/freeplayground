@@ -1,5 +1,4 @@
 # FreePlayground
-
 [![pipeline status](https://gitlab.com/PamuduW/freeplayground/badges/main/pipeline.svg)](https://gitlab.com/PamuduW/freeplayground/-/pipelines)
 
 FreePlayground is my public engineering lab notebook and proof-of-work repo.
@@ -23,30 +22,50 @@ Small tools and scripts (Bash and Python) that solve real problems and reduce ma
 Each week ends with a shippable outcome: a commit, documentation, and repeatable steps.
 
 ## Repo map
-- `docs/weekly/` - weekly notes and progress receipts
-
-## Planned modules
-- `01-foundations/` - Linux, networking basics, scripting notes
+Current module folders:
 - `02-docker/` - Docker labs and Compose demos
-- `03-gitlab-ci/` - GitLab CI patterns and examples
+- `10-automation-scripts/` - reusable scripts and mini tools
+
+Other repo areas:
+- `docs/weekly/` - weekly notes and progress receipts
+- `docs/info/` - repo-level plan, workflow notes, and templates
+- `*/info/` - module-specific notes and runbooks (for example: `02-docker/info/`)
+- `docs/info/tree.md` - latest quick snapshot of repo folder structure
+
+## Planned modules map
+- `01-foundations/` - Linux, networking basics, scripting notes
+- `02-docker/` - Docker labs and Compose demos (current)
+- `03-ci-cd/` - GitLab CI patterns and examples
 - `04-security-ci/` - security in CI experiments
 - `05-kubernetes/` - k8s labs, troubleshooting, security basics
 - `06-observability/` - metrics, logs, dashboards
 - `07-terraform/` - IaC structure and cloud baselines
+- `08-helm/` - optional Helm-focused module if Helm labs grow large
+- `09-cloud/` - AWS and Azure labs, architecture notes, and teardown checklists
 - `10-automation-scripts/` - reusable scripts and mini tools
+- `11-backend-lab/` - optional small API used as an anchor app for containers/CI/K8s/security
 
 ## Weekly log
 - [Week 01](docs/weekly/week-01.md)
+- [Week 02](docs/weekly/week-02.md)
+- [Week 02 Add-on 01 (linting/formatting)](docs/weekly/week-02-addon-01.md)
 
-## How I work
+## Working style
 - WSL-first workflow: development and tooling run inside Linux (WSL).
 - Progress is quota-based: finish the weekly deliverable, not "work every day".
 - Plan is dynamic, goals are fixed: scope can change, outcomes stay the same.
+- Module technical README files are written in a detailed style (commands, actions, and troubleshooting).
 
 ## Weekly Git workflow
-- I create a week branch: `week/NN-short-theme`.
-- I open a Draft merge request to `main` at the start of the week.
-- I merge to `main` at the end of the week using a merge commit, then delete the week branch.
+- A week branch is created using `week/NN-short-theme`.
+- A Draft merge request to `main` is opened at the start of the week.
+- The week branch is merged to `main` at week end using a merge commit, then the source branch is deleted.
+
+## Quality workflow
+- Run `make hooks` once after cloning to install commit hooks.
+- Run `make qa` before pushing or opening merge requests.
+- `pre-commit` runs automatically on each commit.
+- Quality setup details live in `docs/info/linting-formatting-workflow.md`.
 
 ## CI badge setup
 This repo uses a GitLab pipeline badge so the build health is visible at a glance. See the start of this README.md file to see the active badge.
