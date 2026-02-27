@@ -2,6 +2,9 @@ globs:
   - "**/*.md"
 
 ignores:
+  - ".cache/**"
+  - ".venv/**"
+  - "node_modules/**"
   - "docs/weekly/images/**"
   - "docs/info/tree.md"
 
