@@ -2,8 +2,7 @@
 
 ## Scope
 
-A weekly proof-of-work path toward DevOps -> Kubernetes -> CI mastery -> DevSecOps-
-in-CI -> cloud security, using FreePlayground as the portfolio repo.
+A weekly proof-of-work path toward DevOps -> Kubernetes -> CI mastery -> DevSecOps-in-CI -> cloud security, using FreePlayground as the portfolio repo.
 
 ## Rules
 
@@ -17,7 +16,7 @@ in-CI -> cloud security, using FreePlayground as the portfolio repo.
 
 ## Weekly shipping rhythm
 
-- During week: keep notes in docs/weekly/ using docs/weekly/\_template.md.
+- During week: keep notes in docs/weekly/ using docs/info/\_template.md.
 - End of week: commit notes, add evidence (screenshots/links), write a mini retro.
 
 ## Weekly Git workflow (branch-per-week)
@@ -73,7 +72,7 @@ in-CI -> cloud security, using FreePlayground as the portfolio repo.
 
 **Must ship**
 
-- Create devsecops-lab repo + folder skeleton.
+- Create freeplayground repo + folder skeleton.
 - Add docs/game-plan.md and docs/changelog.md.
 - Confirm WSL repo location (~/projects/...).
 

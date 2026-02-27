@@ -29,24 +29,38 @@ One sentence: what "done" looks like this week.
 
 ## Notes / commands / snippets
 
-commands I ran that matter
+Commands I ran that matter:
+
+```bash
+# example
+# rg -n "pattern" -S .
+```
 
 ## Evidence (links + screenshots)
 
-- Links:
-  - GitHub: <link>
-  - GitLab: <link>
-  - Pipeline: <link>
-  - Branch: week/XX-short-theme
-  - MR: <link>
-  - Tag (optional): week-XX
+### Links
 
-- Screenshots:
+- GitHub: <link>
+- GitLab: <link>
+- Branch: week/XX-short-theme
+- MR: <link>
+- Pipeline: <link>
+- Tag (optional): week-XX
+
+### Screenshots
+
+- `docs/weekly/images/week-XX/` (add week-based filenames)
 
 ## Retro
 
-- ## Went well:
+### Went well
 
-- ## Needs improvement:
+-
 
-- ## Next week adjustment (scope can change, outcome stays):
+### Needs improvement
+
+-
+
+### Next week adjustment (scope can change, outcome stays)
+
+-

@@ -1,11 +1,10 @@
-freeplayground
+freeplayground (root)
 ├── .editorconfig
 ├── .gitignore
 ├── .gitlab-ci.yml
 ├── 02-docker
 │ ├── README.md
 │ └── app
-│ ├── .dockerignore
 │ ├── Dockerfile
 │ ├── Dockerfile.multistage
 │ ├── main.py

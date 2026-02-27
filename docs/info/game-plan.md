@@ -7,7 +7,7 @@ The goal is consistent growth across DevOps fundamentals, cloud, automation, and
 ## Principles
 
 - WSL-first workflow: projects live in the Linux filesystem and tooling runs inside WSL.
-- Quota-based progress: finish the weekly deliverable, not "work every day".
+- Quota-based progress: I finish the weekly deliverable, not "work every day".
 - Dynamic plan, fixed outcomes: scope can change, outcomes stay the same.
 - Slip rule: if work slips, it can roll forward, but not by more than 2 weeks without rebalancing scope.
 
@@ -45,9 +45,15 @@ Template:
 
 - `docs/info/_template.md`
 
+## Plan document (source of truth)
+
+The detailed 12-month weekly plan lives here:
+
+- `docs/info/FreePlayground_Game_Plan_v3.md`
+
 This `game-plan.md` file is the living index and will be updated if the plan is adjusted.
 
 ## Current status
 
-- Week 01: repo initialized, CI scaffold created, mirroring enabled, weekly notes started
-- Next: Week 02 in branch `week/02-docker`
+- Logs exist for Week 01 and Week 02 under `docs/weekly/`.
+- Next planned: Week 03 (Docker Compose), per `docs/info/FreePlayground_Game_Plan_v3.md`.
