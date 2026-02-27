@@ -1,4 +1,4 @@
-.PHONY: hooks qa refresh-tree hadolint qa-full
+.PHONY: hooks qa refresh-tree hadolint qa-full hado qaf
 
 PYTHON ?= python3
 VENV ?= .venv
@@ -25,8 +25,12 @@ qa: $(PRE_COMMIT) refresh-tree
 	PRE_COMMIT_HOME=$(PRE_COMMIT_HOME) $(PRE_COMMIT) run --all-files || true
 	PRE_COMMIT_HOME=$(PRE_COMMIT_HOME) $(PRE_COMMIT) run --all-files
 
-hado: $(PRE_COMMIT)
+hadolint: $(PRE_COMMIT)
 	mkdir -p $(PRE_COMMIT_HOME)
 	PRE_COMMIT_HOME=$(PRE_COMMIT_HOME) $(PRE_COMMIT) run --all-files --hook-stage manual hadolint
 
-qaf: qa hado
+qa-full: qa hadolint
+
+# Backward-compatible aliases.
+hado: hadolint
+qaf: qa-full

@@ -38,8 +38,8 @@ make qa
 ### Links
 - GitHub: https://github.com/PamuduW/freeplayground
 - GitLab: https://gitlab.com/PamuduW/freeplayground
-- Branch: week-02
-- MR: <link>
+- Branch: week-02 (legacy naming for this week; standard is `week/NN-short-theme`)
+- MR: https://gitlab.com/PamuduW/freeplayground/-/merge_requests/1
 - Pipeline: https://gitlab.com/PamuduW/freeplayground/-/pipelines
 - Tag (optional): week-02-addon-01
 - Quality guide: [docs/info/linting-formatting-workflow.md](../info/linting-formatting-workflow.md)

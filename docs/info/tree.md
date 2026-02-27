@@ -41,7 +41,10 @@ freeplayground (root)
 │       │   │   ├── week-01-img-01.png
 │       │   │   └── week-01-img-02.png
 │       │   └── week-02
+│       │       ├── week-02-addon-01-img-01.png
+│       │       ├── week-02-img-01.png
+│       │       └── week-02-img-02.png
 │       ├── week-01.md
-│       ├── week-02-Addone-01.md
+│       ├── week-02-addon-01.md
 │       └── week-02.md
 └── pyproject.toml

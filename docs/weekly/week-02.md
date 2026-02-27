@@ -49,7 +49,7 @@ docker network rm fp-net
 ### Links
 - GitHub: https://github.com/PamuduW/freeplayground
 - GitLab: https://gitlab.com/PamuduW/freeplayground
-- Branch: week-02
+- Branch: week-02 (legacy naming for this week; standard is `week/NN-short-theme`)
 - MR: https://gitlab.com/PamuduW/freeplayground/-/merge_requests/1
 - Pipeline: https://gitlab.com/PamuduW/freeplayground/-/pipelines
 - Tag (optional): week-02
@@ -64,7 +64,7 @@ docker network rm fp-net
 - I kept commands reproducible so I can rerun the full flow quickly.
 
 ### Needs improvement
-- non for now
+- None for now.
 
 ### Next week adjustment (scope can change, outcome stays)
 - I will capture screenshots during command execution and update links in the same commit window.
