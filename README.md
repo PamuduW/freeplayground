@@ -24,6 +24,7 @@ Each week ends with a shippable outcome: a commit, documentation, and repeatable
 ## Repo map
 - `docs/weekly/` - weekly notes and progress receipts
 - `02-docker/` - Docker labs and Compose demos
+- `10-automation-scripts/` - reusable scripts and mini tools
 - `*/info/` - module-specific notes and runbooks (for example: `02-docker/info/`)
 - `docs/info/tree.md` - latest quick snapshot of repo folder structure
 

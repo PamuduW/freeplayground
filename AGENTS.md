@@ -13,6 +13,7 @@ This is my proof-of-work lab repo for DevSecOps / Cloud Security learning and ho
 - I use `docs/info/tree.md` as a quick structure reference file when planning and reviewing changes.
 - I write module technical README files in a detailed technical style with commands, flag/action explanations, and troubleshooting notes.
 - Each technical module keeps its own local docs under `<module>/info/` (for example: `02-docker/info/`), and the module README links to those files.
+- I keep reusable helper scripts under `10-automation-scripts/`.
 
 ## Weekly Git workflow (branch-per-week)
 - Each week has its own branch: `week/NN-short-theme` (example: `week/03-docker-compose`).

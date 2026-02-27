@@ -16,7 +16,7 @@ make qa-full
 
 ## What each command does
 - `make hooks`: installs the git pre-commit hook and prepares hook environments.
-- `make qa`: refreshes `docs/info/tree.md` via `tools/update-tree.sh`, runs all hooks across all files, allows auto-fixes on pass 1, then re-runs on pass 2 to confirm clean.
+- `make qa`: refreshes `docs/info/tree.md` via `10-automation-scripts/update-tree.sh`, runs all hooks across all files, allows auto-fixes on pass 1, then re-runs on pass 2 to confirm clean.
 - `make hadolint`: runs the manual-stage hadolint hook across Dockerfiles.
 - `make qa-full`: runs `make qa` and then `make hadolint`.
 
@@ -49,7 +49,7 @@ I normally use `make hadolint` as the short command.
   - `.yamllint`
   - `.markdownlint-cli2.yaml`
   - `.prettierignore`
-- Custom quality scripts live under `tools/quality/`.
+- Custom quality scripts live under `10-automation-scripts/quality/`.
 
 ## Notes about folder layout
 It is possible to move more config files into a subfolder, but that adds extra flags and wrapper wiring for local hooks, CI, and editor integrations. I keep the main dotfiles in root to keep setup simple and predictable.

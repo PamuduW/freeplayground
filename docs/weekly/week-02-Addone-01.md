@@ -17,7 +17,7 @@ Ship a portfolio-grade linting and formatting workflow with one local command, w
 - I added `Makefile` targets for hook install and two-pass quality checks.
 - I configured `.pre-commit-config.yaml` for hygiene, Python, shell, YAML, Markdown, and Docker checks.
 - I added tool configs in repo root and documented the workflow in README and info docs.
-- I added `tools/quality/strip_md_heading_blank_lines.py` and wired it into pre-commit.
+- I added `10-automation-scripts/quality/strip_md_heading_blank_lines.py` and wired it into pre-commit.
 - I verified `make qa`, `make hadolint`, and `make qa-full` runs.
 
 ## What I learned

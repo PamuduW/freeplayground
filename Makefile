@@ -14,10 +14,10 @@ hooks: $(PRE_COMMIT)
 	PRE_COMMIT_HOME=$(PRE_COMMIT_HOME) $(PRE_COMMIT) install --install-hooks --hook-type pre-commit
 
 refresh-tree:
-	@if [ -x tools/update-tree.sh ]; then \
-		tools/update-tree.sh; \
+	@if [ -x 10-automation-scripts/update-tree.sh ]; then \
+		10-automation-scripts/update-tree.sh; \
 	else \
-		echo "Skipping tree refresh: tools/update-tree.sh not found or not executable."; \
+		echo "Skipping tree refresh: 10-automation-scripts/update-tree.sh not found or not executable."; \
 	fi
 
 qa: $(PRE_COMMIT) refresh-tree

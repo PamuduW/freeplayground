@@ -42,6 +42,9 @@ Reference docs live in:
 - `docs/info/`
 - `<module>/info/` for module-specific notes (for example: `02-docker/info/`)
 
+Module placement rules:
+- Reusable scripts and helpers live under `10-automation-scripts/`.
+
 Template:
 - `docs/info/_template.md`
 - `docs/info/linting-formatting-workflow.md` (quality workflow reference)
