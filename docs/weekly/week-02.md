@@ -5,7 +5,7 @@ Ship my Docker fundamentals notes plus one small Dockerized app I can build and 
 ## Must ship (definition of done)
 - [x] 02-docker/README.md with build/run/logs/volumes/networks
 - [x] One Dockerized simple app (02-docker/app/)
-- [ ] Evidence captured (commands + screenshots + links)
+- [x] Evidence captured (commands + screenshots + links)
 
 ## Stretch (nice to have)
 - [x] Multi-stage Docker build
@@ -50,7 +50,7 @@ docker network rm fp-net
 - GitHub: https://github.com/PamuduW/freeplayground
 - GitLab: https://gitlab.com/PamuduW/freeplayground
 - Branch: week-02
-- MR: <link>
+- MR: https://gitlab.com/PamuduW/freeplayground/-/merge_requests/1
 - Pipeline: https://gitlab.com/PamuduW/freeplayground/-/pipelines
 - Tag (optional): week-02
 
@@ -64,8 +64,7 @@ docker network rm fp-net
 - I kept commands reproducible so I can rerun the full flow quickly.
 
 ### Needs improvement
-- I did not capture all Docker fundamentals screenshots while running the commands.
-- I still need to replace placeholder MR link evidence.
+- non for now
 
 ### Next week adjustment (scope can change, outcome stays)
 - I will capture screenshots during command execution and update links in the same commit window.
