@@ -32,10 +32,10 @@ git push
 
 ## End of week (merge + clean up)
 
-1. Ensure the "must ship" checklist is complete and `docs/weekly/week-NN.md` has evidence.
+1) Ensure the "must ship" checklist is complete and `docs/weekly/week-NN.md` has evidence.
 
-2. Merge the MR into `main` using a merge commit.
+2) Merge the MR into `main` using a merge commit.
 
-3. Delete the source branch after merge.
+3) Delete the source branch after merge.
 
 Optional: create a tag `week-NN` on the merge commit.
