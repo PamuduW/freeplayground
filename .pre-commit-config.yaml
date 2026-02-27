@@ -39,6 +39,7 @@ repos:
     rev: v0.14.0
     hooks:
       - id: markdownlint-cli2
+        pass_filenames: false
         args: [--config, .markdownlint-cli2.yaml]
 
   - repo: local
@@ -52,9 +53,9 @@ repos:
         additional_dependencies:
           - prettier@3.3.3
 
-  - repo: https://github.com/hadolint/hadolint
-    rev: v2.12.0
-    hooks:
       - id: hadolint
+        name: hadolint
+        language: docker_image
+        entry: hadolint/hadolint:v2.12.0 hadolint
         stages: [manual]
         files: (^|/)([Dd]ockerfile|[Dd]ockerfile\..*)$
