@@ -3,22 +3,22 @@
 Ship my Docker fundamentals notes plus one small Dockerized app I can build and run locally.
 
 ## Must ship (definition of done)
-- [ ] 02-docker/README.md with build/run/logs/volumes/networks
-- [ ] One Dockerized simple app (02-docker/app/)
+- [x] 02-docker/README.md with build/run/logs/volumes/networks
+- [x] One Dockerized simple app (02-docker/app/)
 - [ ] Evidence captured (commands + screenshots + links)
 
 ## Stretch (nice to have)
-- [ ] Multi-stage Docker build
+- [x] Multi-stage Docker build
 
 ## What I did (short log)
--
--
--
+- I documented the Week 02 Docker workflow in `02-docker/README.md` and module docs under `02-docker/info/`.
+- I built a small FastAPI app in `02-docker/app/` with a Dockerfile and a multistage Dockerfile.
+- I captured repeatable commands for build, run, logs, volumes, and network verification.
 
 ## What I learned
--
--
--
+- Keeping command notes close to module code makes weekly evidence easier to maintain.
+- A simple request log written to `/data` is enough to demonstrate real volume persistence.
+- A multistage image flow is easier to reason about when builder and runtime concerns are separated.
 
 ## Notes / commands / snippets
 ```bash
@@ -46,24 +46,26 @@ docker network rm fp-net
 ```
 
 ## Evidence (links + screenshots)
-- Links:
+### Links
+- GitHub: https://github.com/PamuduW/freeplayground
+- GitLab: https://gitlab.com/PamuduW/freeplayground
+- Branch: week-02
+- MR: <link>
+- Pipeline: https://gitlab.com/PamuduW/freeplayground/-/pipelines
+- Tag (optional): week-02
 
-  - GitHub: <link>
-  - GitLab: <link>
-  - Pipeline: <link>
-  - MR: <link>
-  - Tag (optional): week-02
-
-- Screenshots:
-  - docker build success
-  - container running + curl output
-  - docker logs output
-  - docker volume ls + proof data persists
-  - docker network ls + busybox -> app request
+### Screenshots
+  ![Docker build](images/week-02/week-02-img-01.png)
+  ![Container running](images/week-02/week-02-img-02.png)
 
 ## Retro
-- ## Went well:
+### Went well
+- I shipped the core Docker app files and supporting module documentation in the same week.
+- I kept commands reproducible so I can rerun the full flow quickly.
 
-- ## Needs improvement:
+### Needs improvement
+- I did not capture all Docker fundamentals screenshots while running the commands.
+- I still need to replace placeholder MR link evidence.
 
-- ## Next week adjustment (scope can change, outcome stays):
+### Next week adjustment (scope can change, outcome stays)
+- I will capture screenshots during command execution and update links in the same commit window.

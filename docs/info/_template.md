@@ -39,7 +39,7 @@ Commands I ran that matter:
 - Tag (optional): week-XX
 
 ### Screenshots
-- `docs/weekly/images/week-XX/` (add week-based filenames)
+  ![example](images/week-nn/week-nn-img-mm.png)
 
 ## Retro
 ### Went well
