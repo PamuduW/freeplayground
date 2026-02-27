@@ -28,6 +28,7 @@ git push
 ```
 
 I run `make qa` during the week before I push so my branch stays lint-clean.
+`make qa` also refreshes `docs/info/tree.md` automatically.
 I keep the quality workflow reference in `docs/info/linting-formatting-workflow.md`.
 
 ## End of week (merge + clean up)

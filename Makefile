@@ -1,4 +1,4 @@
-.PHONY: hooks qa
+.PHONY: hooks qa refresh-tree hadolint qa-full
 
 PYTHON ?= python3
 VENV ?= .venv
@@ -13,7 +13,20 @@ hooks: $(PRE_COMMIT)
 	mkdir -p $(PRE_COMMIT_HOME)
 	PRE_COMMIT_HOME=$(PRE_COMMIT_HOME) $(PRE_COMMIT) install --install-hooks --hook-type pre-commit
 
-qa: $(PRE_COMMIT)
+refresh-tree:
+	@if [ -x tools/update-tree.sh ]; then \
+		tools/update-tree.sh; \
+	else \
+		echo "Skipping tree refresh: tools/update-tree.sh not found or not executable."; \
+	fi
+
+qa: $(PRE_COMMIT) refresh-tree
 	mkdir -p $(PRE_COMMIT_HOME)
 	PRE_COMMIT_HOME=$(PRE_COMMIT_HOME) $(PRE_COMMIT) run --all-files || true
 	PRE_COMMIT_HOME=$(PRE_COMMIT_HOME) $(PRE_COMMIT) run --all-files
+
+hado: $(PRE_COMMIT)
+	mkdir -p $(PRE_COMMIT_HOME)
+	PRE_COMMIT_HOME=$(PRE_COMMIT_HOME) $(PRE_COMMIT) run --all-files --hook-stage manual hadolint
+
+qaf: qa hado

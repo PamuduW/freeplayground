@@ -21,5 +21,8 @@ lint:
       - .cache/pre-commit
       - .cache/pip
   script:
+    - apt-get update
+    - apt-get install -y --no-install-recommends git ca-certificates
+    - rm -rf /var/lib/apt/lists/*
     - python -m pip install pre-commit
     - python -m pre_commit run --all-files --show-diff-on-failure
