@@ -1,5 +1,4 @@
 # Week XX - <Theme>
-
 ## Goal
 One sentence: what "done" looks like this week.
 
@@ -13,14 +12,14 @@ One sentence: what "done" looks like this week.
 - [ ] Item 2
 
 ## What I did (short log)
-- 
-- 
-- 
+-
+-
+-
 
 ## What I learned
-- 
-- 
-- 
+-
+-
+-
 
 ## Notes / commands / snippets
 Commands I ran that matter:
@@ -31,7 +30,6 @@ Commands I ran that matter:
 ```
 
 ## Evidence (links + screenshots)
-
 ### Links
 - GitHub: <link>
 - GitLab: <link>
@@ -44,12 +42,11 @@ Commands I ran that matter:
 - `docs/weekly/images/week-XX/` (add week-based filenames)
 
 ## Retro
-
 ### Went well
-- 
+-
 
 ### Needs improvement
-- 
+-
 
 ### Next week adjustment (scope can change, outcome stays)
-- 
+-

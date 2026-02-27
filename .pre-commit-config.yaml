@@ -49,9 +49,15 @@ repos:
         language: node
         entry: prettier
         args: [--write]
-        files: \.(md|ya?ml|json)$
+        files: \.(ya?ml|json)$
         additional_dependencies:
           - prettier@3.3.3
+
+      - id: strip-md-heading-blank-lines
+        name: strip markdown heading blank lines
+        language: system
+        entry: python3 scripts/strip_md_heading_blank_lines.py
+        files: \.md$
 
       - id: hadolint
         name: hadolint

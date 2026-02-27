@@ -1,33 +1,26 @@
 # Week 02 - Docker fundamentals
-
 ## Goal
-
 Ship my Docker fundamentals notes plus one small Dockerized app I can build and run locally.
 
 ## Must ship (definition of done)
-
 - [ ] 02-docker/README.md with build/run/logs/volumes/networks
 - [ ] One Dockerized simple app (02-docker/app/)
 - [ ] Evidence captured (commands + screenshots + links)
 
 ## Stretch (nice to have)
-
 - [ ] Multi-stage Docker build
 
 ## What I did (short log)
-
 -
 -
 -
 
 ## What I learned
-
 -
 -
 -
 
 ## Notes / commands / snippets
-
 ```bash
 # build
 docker build -t fp-hello-api:dev ./02-docker/app
@@ -53,8 +46,8 @@ docker network rm fp-net
 ```
 
 ## Evidence (links + screenshots)
-
 - Links:
+
   - GitHub: <link>
   - GitLab: <link>
   - Pipeline: <link>
@@ -69,12 +62,8 @@ docker network rm fp-net
   - docker network ls + busybox -> app request
 
 ## Retro
+- ## Went well:
 
-- Went well:
-  -
+- ## Needs improvement:
 
-- Needs improvement:
-  -
-
-- Next week adjustment (scope can change, outcome stays):
-  -
+- ## Next week adjustment (scope can change, outcome stays):

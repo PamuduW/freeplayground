@@ -1,5 +1,4 @@
 # FreePlayground Agent Notes
-
 ## What this repo is
 This is my proof-of-work lab repo for DevSecOps / Cloud Security learning and homelab experiments.
 

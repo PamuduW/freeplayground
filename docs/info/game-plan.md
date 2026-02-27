@@ -1,5 +1,4 @@
 # FreePlayground Game Plan (12 months)
-
 This repo is my public engineering lab notebook and proof-of-work log.
 
 The goal is consistent growth across DevOps fundamentals, cloud, automation, and security, resulting in a portfolio I can show confidently in interviews.
@@ -27,9 +26,9 @@ By the end of this plan, this repo should demonstrate:
 
 ## Weekly cadence
 Every week ships:
-1) A deliverable (doc, lab, script, pipeline, diagram, or mini-project)
-2) Evidence (screenshots, links, outputs)
-3) A short retro (what worked, what to improve)
+1. A deliverable (doc, lab, script, pipeline, diagram, or mini-project)
+2. Evidence (screenshots, links, outputs)
+3. A short retro (what worked, what to improve)
 
 Weekly notes live in:
 - `docs/weekly/week-XX.md`
