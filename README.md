@@ -50,22 +50,22 @@ Other repo areas:
 - [Week 02](docs/weekly/week-02.md)
 - [Week 02 Add-on 01 (linting/formatting)](docs/weekly/week-02-addon-01.md)
 
-## How I work
+## Working style
 - WSL-first workflow: development and tooling run inside Linux (WSL).
 - Progress is quota-based: finish the weekly deliverable, not "work every day".
 - Plan is dynamic, goals are fixed: scope can change, outcomes stay the same.
 - Module technical README files are written in a detailed style (commands, actions, and troubleshooting).
 
 ## Weekly Git workflow
-- I create a week branch: `week/NN-short-theme`.
-- I open a Draft merge request to `main` at the start of the week.
-- I merge to `main` at the end of the week using a merge commit, then delete the week branch.
+- A week branch is created using `week/NN-short-theme`.
+- A Draft merge request to `main` is opened at the start of the week.
+- The week branch is merged to `main` at week end using a merge commit, then the source branch is deleted.
 
 ## Quality workflow
-- I run `make hooks` once after cloning to install commit hooks.
-- I run `make qa` before pushing or opening merge requests.
+- Run `make hooks` once after cloning to install commit hooks.
+- Run `make qa` before pushing or opening merge requests.
 - `pre-commit` runs automatically on each commit.
-- I keep the quality setup details in `docs/info/linting-formatting-workflow.md`.
+- Quality setup details live in `docs/info/linting-formatting-workflow.md`.
 
 ## CI badge setup
 This repo uses a GitLab pipeline badge so the build health is visible at a glance. See the start of this README.md file to see the active badge.
