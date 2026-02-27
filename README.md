@@ -60,6 +60,12 @@ Each week ends with a shippable outcome: a commit, documentation, and repeatable
 - I open a Draft merge request to `main` at the start of the week.
 - I merge to `main` at the end of the week using a merge commit, then delete the week branch.
 
+## Quality workflow
+
+- I run `make hooks` once after cloning to install commit hooks.
+- I run `make qa` before pushing or opening merge requests.
+- `pre-commit` runs automatically on each commit.
+
 ## CI badge setup
 
 This repo uses a GitLab pipeline badge so the build health is visible at a glance. See the start of this README.md file to see the active badge.

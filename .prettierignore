@@ -1,0 +1,17 @@
+# Media and binary assets
+*.png
+*.jpg
+*.jpeg
+*.gif
+*.webp
+*.ico
+*.pdf
+
+# Generated and cache directories
+.git/
+node_modules/
+.cache/
+
+# Evidence and generated docs
+docs/weekly/images/**
+docs/info/tree.md

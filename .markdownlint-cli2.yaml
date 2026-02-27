@@ -1,0 +1,10 @@
+globs:
+  - "**/*.md"
+
+ignores:
+  - "docs/weekly/images/**"
+  - "docs/info/tree.md"
+
+config:
+  default: true
+  MD013: false

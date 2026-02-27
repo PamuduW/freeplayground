@@ -24,11 +24,14 @@ Then create a Draft merge request from `week/NN-...` into `main`.
 ## During week (work normally)
 
 ```bash
+make qa
 git status
 git add -A
 git commit -m "Week NN: <small change>"
 git push
 ```
+
+I run `make qa` during the week before I push so my branch stays lint-clean.
 
 ## End of week (merge + clean up)
 

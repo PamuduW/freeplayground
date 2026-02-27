@@ -1,4 +1,4 @@
-stages: [smoke]
+stages: [smoke, lint]
 
 smoke:
   stage: smoke
@@ -6,3 +6,20 @@ smoke:
   script:
     - echo "CI is alive."
     - uname -a
+
+lint:
+  stage: lint
+  image: python:3.12-slim
+  variables:
+    PRE_COMMIT_HOME: "$CI_PROJECT_DIR/.cache/pre-commit"
+    PIP_CACHE_DIR: "$CI_PROJECT_DIR/.cache/pip"
+  cache:
+    key:
+      files:
+        - .pre-commit-config.yaml
+    paths:
+      - .cache/pre-commit
+      - .cache/pip
+  script:
+    - python -m pip install pre-commit
+    - python -m pre_commit run --all-files --show-diff-on-failure

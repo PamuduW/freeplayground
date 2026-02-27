@@ -1,0 +1,10 @@
+extends: default
+
+ignore: |
+  .git/
+  docs/weekly/images/
+
+rules:
+  line-length: disable
+  document-start: disable
+  comments-indentation: disable
