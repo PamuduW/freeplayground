@@ -35,7 +35,7 @@ Other repo areas:
 ## Planned modules map
 - `01-foundations/` - Linux, networking basics, scripting notes
 - `02-docker/` - Docker labs and Compose demos (current)
-- `03-gitlab-ci/` - GitLab CI patterns and examples
+- `03-ci-cd/` - GitLab CI patterns and examples
 - `04-security-ci/` - security in CI experiments
 - `05-kubernetes/` - k8s labs, troubleshooting, security basics
 - `06-observability/` - metrics, logs, dashboards

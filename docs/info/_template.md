@@ -39,7 +39,7 @@ Commands I ran that matter:
 - Tag (optional): week-XX
 
 ### Screenshots
-  ![example](images/week-nn/week-nn-img-mm.png)
+  ![example](images/week-XX/week-XX-img-YY.png)
 
 ## Retro
 ### Went well

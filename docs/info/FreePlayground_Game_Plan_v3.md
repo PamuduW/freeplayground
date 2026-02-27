@@ -23,7 +23,6 @@ A weekly proof-of-work path toward DevOps -> Kubernetes -> CI mastery -> DevSecO
 - Optional: a tag week-NN is created on the merge commit.
 
 ## Recommended repo structure (full showcase layout to grow into)
-- This is the full showcase layout to grow into:
 - docs/weekly/ (weekly logs + \_template.md + images/)
 - 01-foundations/ (Linux, networking, Git, scripting notes)
 - 02-docker/ (Docker + Compose labs)
@@ -62,7 +61,7 @@ A weekly proof-of-work path toward DevOps -> Kubernetes -> CI mastery -> DevSecO
 **Must ship**
 
 - Create freeplayground repo + folder skeleton.
-- Add docs/game-plan.md and docs/changelog.md.
+- Add `docs/info/game-plan.md` and `CHANGELOG.md`.
 - Confirm WSL repo location (~/projects/...).
 
 **Stretch**
