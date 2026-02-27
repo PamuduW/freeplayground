@@ -31,8 +31,8 @@ Commands I ran that matter:
 
 ## Evidence (links + screenshots)
 ### Links
-- GitHub: <link>
-- GitLab: <link>
+- GitHub: https://github.com/PamuduW/freeplayground
+- GitLab: https://gitlab.com/PamuduW/freeplayground
 - Branch: week/XX-short-theme
 - MR: <link>
 - Pipeline: <link>

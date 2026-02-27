@@ -53,3 +53,22 @@ git commit -m "<message>"
 ```
 
 This order avoids pre-commit stash conflicts from mixed staged and unstaged edits.
+
+## Partial commit workflow I follow
+If I want to commit only part of my work, I use this flow so pre-commit does not fail on stash/apply conflicts:
+
+```bash
+# stage only what I want to commit
+git add -p
+
+# stash everything else but keep staged changes in place
+git stash push --keep-index --include-untracked -m "partial-commit-temp"
+
+# commit staged changes only
+git commit -m "<message>"
+
+# bring back remaining work
+git stash pop
+```
+
+If hooks auto-fix files during commit, I re-stage those files and run commit again.

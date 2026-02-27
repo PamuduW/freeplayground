@@ -2,6 +2,10 @@ freeplayground (root)
 ├── .editorconfig
 ├── .gitignore
 ├── .gitlab-ci.yml
+├── .markdownlint-cli2.yaml
+├── .pre-commit-config.yaml
+├── .prettierignore
+├── .yamllint
 ├── 02-docker
 │   ├── README.md
 │   └── app
@@ -12,20 +16,28 @@ freeplayground (root)
 │       └── requirements.txt
 ├── AGENTS.md
 ├── CHANGELOG.md
+├── Makefile
 ├── README.md
-└── docs
-    ├── info
-    │   ├── FreePlayground_Game_Plan_v3.md
-    │   ├── _template.md
-    │   ├── game-plan.md
-    │   ├── tree.md
-    │   ├── update-tree.sh
-    │   └── weekly-workflow.md
-    └── weekly
-        ├── images
-        │   ├── week-01
-        │   │   ├── week-01-img-01.png
-        │   │   └── week-01-img-02.png
-        │   └── week-02
-        ├── week-01.md
-        └── week-02.md
+├── docs
+│   ├── info
+│   │   ├── FreePlayground_Game_Plan_v3.md
+│   │   ├── _template.md
+│   │   ├── game-plan.md
+│   │   ├── linting-formatting-workflow.md
+│   │   ├── tree.md
+│   │   └── weekly-workflow.md
+│   └── weekly
+│       ├── images
+│       │   ├── week-01
+│       │   │   ├── week-01-img-01.png
+│       │   │   └── week-01-img-02.png
+│       │   └── week-02
+│       ├── week-01.md
+│       ├── week-02-Addone-01.md
+│       └── week-02.md
+├── pyproject.toml
+└── tools
+    ├── quality
+    │   ├── README.md
+    │   └── strip_md_heading_blank_lines.py
+    └── update-tree.sh

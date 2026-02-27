@@ -29,6 +29,7 @@ This is my proof-of-work lab repo for DevSecOps / Cloud Security learning and ho
 - I keep diffs small and easy to review.
 - I update documentation alongside behavior changes.
 - I avoid scanning large binaries (PDFs/images) unless explicitly requested.
+- I do not want agents to commit changes when work is done; I review and commit the changes myself after review.
 
 ## Definition of done
 - Each week ships at least one concrete artifact (code/docs) + `docs/weekly/week-XX.md` + evidence (commands, links, screenshots).

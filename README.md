@@ -36,8 +36,8 @@ Each week ends with a shippable outcome: a commit, documentation, and repeatable
 
 ## Weekly log
 - [Week 01](docs/weekly/week-01.md)
-- [Week 01-1 (linting/formatting add-on)](docs/weekly/week-01-1.md)
 - [Week 02](docs/weekly/week-02.md)
+- [Week 02 Add-on 01 (linting/formatting)](docs/weekly/week-02-Addone-01.md)
 
 ## How I work
 - WSL-first workflow: development and tooling run inside Linux (WSL).
