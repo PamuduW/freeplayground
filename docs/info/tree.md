@@ -8,12 +8,21 @@ freeplayground (root)
 ├── .yamllint
 ├── 02-docker
 │   ├── README.md
-│   └── app
-│       ├── .dockerignore
-│       ├── Dockerfile
-│       ├── Dockerfile.multistage
-│       ├── main.py
-│       └── requirements.txt
+│   ├── app
+│   │   ├── .dockerignore
+│   │   ├── Dockerfile
+│   │   ├── Dockerfile.multistage
+│   │   ├── main.py
+│   │   └── requirements.txt
+│   └── info
+│       ├── _index.md
+│       ├── core-docker.md
+│       └── multistage-docker.md
+├── 10-automation-scripts
+│   ├── quality
+│   │   ├── README.md
+│   │   └── strip_md_heading_blank_lines.py
+│   └── update-tree.sh
 ├── AGENTS.md
 ├── CHANGELOG.md
 ├── Makefile
@@ -35,9 +44,4 @@ freeplayground (root)
 │       ├── week-01.md
 │       ├── week-02-Addone-01.md
 │       └── week-02.md
-├── pyproject.toml
-└── tools
-    ├── quality
-    │   ├── README.md
-    │   └── strip_md_heading_blank_lines.py
-    └── update-tree.sh
+└── pyproject.toml

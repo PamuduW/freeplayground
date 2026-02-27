@@ -22,20 +22,28 @@ Small tools and scripts (Bash and Python) that solve real problems and reduce ma
 Each week ends with a shippable outcome: a commit, documentation, and repeatable steps.
 
 ## Repo map
-- `docs/weekly/` - weekly notes and progress receipts
+Current module folders:
 - `02-docker/` - Docker labs and Compose demos
 - `10-automation-scripts/` - reusable scripts and mini tools
+
+Other repo areas:
+- `docs/weekly/` - weekly notes and progress receipts
+- `docs/info/` - repo-level plan, workflow notes, and templates
 - `*/info/` - module-specific notes and runbooks (for example: `02-docker/info/`)
 - `docs/info/tree.md` - latest quick snapshot of repo folder structure
 
-## Planned modules
+## Planned modules map
 - `01-foundations/` - Linux, networking basics, scripting notes
+- `02-docker/` - Docker labs and Compose demos (current)
 - `03-gitlab-ci/` - GitLab CI patterns and examples
 - `04-security-ci/` - security in CI experiments
 - `05-kubernetes/` - k8s labs, troubleshooting, security basics
 - `06-observability/` - metrics, logs, dashboards
 - `07-terraform/` - IaC structure and cloud baselines
+- `08-helm/` - optional Helm-focused module if Helm labs grow large
+- `09-cloud/` - AWS and Azure labs, architecture notes, and teardown checklists
 - `10-automation-scripts/` - reusable scripts and mini tools
+- `11-backend-lab/` - optional small API used as an anchor app for containers/CI/K8s/security
 
 ## Weekly log
 - [Week 01](docs/weekly/week-01.md)

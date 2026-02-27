@@ -45,7 +45,7 @@ make qa
 - Quality guide: [docs/info/linting-formatting-workflow.md](../info/linting-formatting-workflow.md)
 
 ### Screenshots
-- `docs/weekly/images/week-02/` with add-on filenames (for example: `week-02-addon-01-img-01.png`).
+  ![formatting and linting](images/week-02/week-02-addon-01-img-01.png)
 
 ## Retro
 ### Went well
