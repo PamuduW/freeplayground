@@ -9,7 +9,7 @@ fi
 
 ROOT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
 OUTPUT_FILE="$ROOT_DIR/docs/info/tree.md"
-IGNORE_PATTERN='.git|.cache|.ruff_cache|.venv'
+IGNORE_PATTERN='.git|.cache|.ruff_cache|.venv|temp'
 
 {
   echo "$(basename "$ROOT_DIR") (root)"

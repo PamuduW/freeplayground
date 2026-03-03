@@ -33,6 +33,7 @@ freeplayground (root)
 │   │   ├── _template.md
 │   │   ├── game-plan.md
 │   │   ├── linting-formatting-workflow.md
+│   │   ├── target-architecture.md
 │   │   ├── tree.md
 │   │   └── weekly-workflow.md
 │   └── weekly
