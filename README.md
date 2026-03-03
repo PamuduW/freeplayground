@@ -50,6 +50,12 @@ Other repo areas:
 - [Week 02](docs/weekly/week-02.md)
 - [Week 02 Add-on 01 (linting/formatting)](docs/weekly/week-02-addon-01.md)
 
+## Repo links and hosting
+- **GitLab (primary):** https://gitlab.com/PamuduW/freeplayground
+- **GitHub (mirror):** https://github.com/PamuduW/freeplayground
+
+GitLab is the development origin — cloning, branches, merge requests, and CI all happen here. GitLab repo mirroring pushes every change to the GitHub mirror automatically. GitHub is used for its free security features (CodeQL, Dependabot alerts, secret scanning, code scanning). No pull requests or branches are created on the GitHub side.
+
 ## Working style
 - WSL-first workflow: development and tooling run inside Linux (WSL).
 - Progress is quota-based: finish the weekly deliverable, not "work every day".

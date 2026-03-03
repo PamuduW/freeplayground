@@ -30,6 +30,11 @@ This is my proof-of-work lab repo for DevSecOps / Cloud Security learning and ho
 - Repo-level reference docs live under `docs/info/`.
 - Module-level reference docs live under each module's `info/` folder.
 
+## Temp folder (`temp/`)
+- `temp/` is git-ignored and used for throwaway files: scratch notes, learning guides, example images, draft YAML/text/Markdown, or anything I plan to delete later.
+- When I ask to create a temporary or throwaway file, always place it in `temp/`.
+- Never reference `temp/` files from tracked docs (they can disappear at any time).
+
 ## How I want changes made
 - Plan first. Before opening files, I list up to 3 files I need and why.
 - I use `rg` for discovery and open only relevant file sections.
