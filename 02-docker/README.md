@@ -55,13 +55,27 @@ docker rm -f fp-hello-api       # force-remove the running container
 docker network rm fp-net        # remove the custom network
 ```
 
+## Docker Compose (Week 03)
+The app now runs as a multi-service stack via Compose: FastAPI + Redis. The visit counter is stored in Redis and the `/health` endpoint reports Redis connectivity.
+
+### Quick start
+```bash
+cd 02-docker/app
+docker compose up -d --build
+# visit http://localhost:8000/ — each request increments the Redis counter
+# visit http://localhost:8000/health — shows app + Redis status
+docker compose down
+```
+
 ## Module docs map
 - `info/_index.md` - navigation for module docs.
 - `info/core-docker.md` - detailed commands, flags, workflow, and troubleshooting for day-to-day Docker usage.
 - `info/multistage-docker.md` - multistage Dockerfile pattern used in this module and when to apply it.
+- `info/docker-compose.md` - Compose workflow, healthchecks, restart policies, and debugging common failures.
 
 ## App location
 - `app/Dockerfile`
 - `app/Dockerfile.multistage`
+- `app/docker-compose.yml`
 - `app/main.py`
 - `app/requirements.txt`

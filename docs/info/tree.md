@@ -12,11 +12,13 @@ freeplayground (root)
 │   │   ├── .dockerignore
 │   │   ├── Dockerfile
 │   │   ├── Dockerfile.multistage
+│   │   ├── docker-compose.yml
 │   │   ├── main.py
 │   │   └── requirements.txt
 │   └── info
 │       ├── _index.md
 │       ├── core-docker.md
+│       ├── docker-compose.md
 │       └── multistage-docker.md
 ├── 10-automation-scripts
 │   ├── quality
@@ -41,11 +43,15 @@ freeplayground (root)
 │       │   ├── week-01
 │       │   │   ├── week-01-img-01.png
 │       │   │   └── week-01-img-02.png
-│       │   └── week-02
-│       │       ├── week-02-addon-01-img-01.png
-│       │       ├── week-02-img-01.png
-│       │       └── week-02-img-02.png
+│       │   ├── week-02
+│       │   │   ├── week-02-addon-01-img-01.png
+│       │   │   ├── week-02-img-01.png
+│       │   │   └── week-02-img-02.png
+│       │   └── week-03
+│       │       ├── week-03-img-01.png
+│       │       └── week-03-img-02.png
 │       ├── week-01.md
 │       ├── week-02-addon-01.md
-│       └── week-02.md
+│       ├── week-02.md
+│       └── week-03.md
 └── pyproject.toml
