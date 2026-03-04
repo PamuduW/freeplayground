@@ -44,6 +44,8 @@ Reference docs live in:
 
 Module placement rules:
 - Reusable scripts and helpers live under `10-automation-scripts/`.
+- `02-docker/app/` is the Docker/Compose learning artifact — it stays mostly frozen after the Docker phase.
+- `11-backend-lab/` is the evolving anchor app used as the target for K8s, CI pipelines, security scanning, and later phases.
 
 Template:
 - `docs/info/_template.md`
@@ -56,5 +58,6 @@ The detailed 12-month weekly plan lives here:
 This `game-plan.md` file is the living index and will be updated if the plan is adjusted.
 
 ## Current status
-- Logs exist for Week 01 and Week 02 under `docs/weekly/`.
-- Next planned: Week 03 (Docker Compose), per `docs/info/FreePlayground_Game_Plan_v3.md`.
+- Logs exist for Week 01, Week 02, and Week 03 under `docs/weekly/`.
+- Week 03 (Docker Compose) is in progress on branch `week/03-docker-compose`.
+- Next planned: Week 04 (Linux + scripting day-to-day), per `docs/info/FreePlayground_Game_Plan_v3.md`.

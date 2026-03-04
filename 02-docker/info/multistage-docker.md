@@ -1,4 +1,6 @@
 # Multistage Docker build notes
+These standalone Docker commands work without Redis. The app detects that `REDIS_HOST` is not set and falls back to in-memory visit counting. For the full Redis-backed stack, see `docker-compose.md`.
+
 ## Why multistage is used
 A multistage build separates dependency build steps from runtime image creation. This helps reduce runtime image size and keeps the final image cleaner.
 

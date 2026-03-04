@@ -1,4 +1,6 @@
 # Core Docker workflow (Week 02)
+These standalone Docker commands work without Redis. The app detects that `REDIS_HOST` is not set and falls back to in-memory visit counting. For the full Redis-backed stack, see `docker-compose.md`.
+
 ## Build
 Build an image from the Dockerfile in `./app` and tag it as `fp-hello-api:dev`.
 

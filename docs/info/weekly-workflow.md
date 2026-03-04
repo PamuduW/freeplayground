@@ -6,13 +6,13 @@ This repo uses a branch-per-week workflow, merged into `main` at the end of each
 git checkout main
 git pull
 
-# example for Week 03
-git checkout -b week/03-docker-compose
-git push -u gitlab week/03-docker-compose
-git push -u github week/03-docker-compose
+# example for Week 04
+git checkout -b week/04-linux-scripting
+git push -u origin week/04-linux-scripting
 ```
 
-Then create a Draft merge request from `week/NN-...` into `main`.
+Then create a Draft merge request from `week/NN-...` into `main` on GitLab.
+GitLab mirroring pushes the branch to GitHub automatically.
 
 ## Start of week (create the week log)
 - Create `docs/weekly/week-NN.md` using `docs/info/_template.md` as the base.

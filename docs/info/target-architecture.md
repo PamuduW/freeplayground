@@ -87,7 +87,8 @@ Shows which repo module implements which part of the pipeline.
 | Helm (if split from K8s) | `08-helm/` | charts, values files |
 | Cloud labs | `09-cloud/` | architecture docs, teardown checklists |
 | Automation / helper scripts | `10-automation-scripts/` | bash/python utilities |
-| Anchor application | `11-backend-lab/` | small API used as the deploy target |
+| Anchor application | `11-backend-lab/` | evolving API used as the deploy target for CI/K8s/security phases |
+| Docker learning artifact | `02-docker/app/` | frozen after Docker phase; standalone + Compose demo |
 | Foundations (Linux, Git) | `01-foundations/` | notes, scripts |
 
 ## Constraints and decisions

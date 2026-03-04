@@ -49,6 +49,7 @@ Other repo areas:
 - [Week 01](docs/weekly/week-01.md)
 - [Week 02](docs/weekly/week-02.md)
 - [Week 02 Add-on 01 (linting/formatting)](docs/weekly/week-02-addon-01.md)
+- [Week 03](docs/weekly/week-03.md)
 
 ## Repo links and hosting
 - **GitLab (primary):** https://gitlab.com/PamuduW/freeplayground

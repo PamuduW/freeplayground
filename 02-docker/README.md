@@ -1,10 +1,10 @@
-# Docker fundamentals (Week 02)
+# Docker fundamentals (Week 02 - 03)
 This module covers practical Docker fundamentals used in this repo: building images, running containers, reading logs, managing volumes, and container networking.
 
 In this repo, Docker is used to containerize the sample FastAPI app under `02-docker/app/` and run repeatable local experiments for container lifecycle and operations.
 
 ## Quick workflow
-Run these from repo root unless noted.
+Run these from repo root unless noted. The app works in two modes: **standalone** (file-only visit counting) and **Compose** (Redis-backed counting). The standalone commands below work without Redis.
 
 ### Build
 ```bash
@@ -56,7 +56,7 @@ docker network rm fp-net        # remove the custom network
 ```
 
 ## Docker Compose (Week 03)
-The app now runs as a multi-service stack via Compose: FastAPI + Redis. The visit counter is stored in Redis and the `/health` endpoint reports Redis connectivity.
+With Compose, the app runs as a multi-service stack: FastAPI + Redis. The visit counter is stored in Redis and the `/health` endpoint reports Redis connectivity. Without Compose, the app falls back to in-memory counting and `/health` reports `redis: "not configured"`.
 
 ### Quick start
 ```bash
