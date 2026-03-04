@@ -43,7 +43,7 @@ docker compose exec redis redis-cli ping   # quick Redis connectivity check
 - GitLab: https://gitlab.com/PamuduW/freeplayground
 - Branch: `week/03-docker-compose`
 - MR: https://gitlab.com/PamuduW/freeplayground/-/merge_requests/2
-- Pipeline: (update with pipeline link)
+- Pipeline: https://gitlab.com/PamuduW/freeplayground/-/pipelines/2364136056
 - Tag (optional): week-03
 
 ### Screenshots
