@@ -60,3 +60,5 @@ out/
 *.key
 *.pfx
 temp/
+CLAUDE.md
+.cursor
