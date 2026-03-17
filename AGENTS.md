@@ -67,6 +67,6 @@ This is my proof-of-work lab repo for DevSecOps / Cloud Security learning and ho
 - I keep a short teardown checklist in the week log.
 
 ## Full repo check
-- Last full check commit: `2dba908` (Week 03 session)
+- Last full check commit: `37edf98` (Week 03 close)
 - What the check covers: placeholder/unfilled text in docs (`<link>`, `(update with ...)`, `img-YY`, unchecked boxes in completed weeks), missing weekly log links in root README, stale titles/headings, tree.md accuracy, broken internal links, CHANGELOG.md completeness (all weeks represented), game-plan.md current status accuracy, weekly-workflow.md example commands matching actual remote setup, module README week ranges matching content.
 - When I ask for a full check, only scan files changed since this commit (`git diff --name-only <hash>..HEAD`). After the check, update this commit hash.
