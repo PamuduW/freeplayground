@@ -31,7 +31,7 @@ hadolint: $(PRE_COMMIT)
 
 qa-full: qa hadolint
 
-WEEK ?= $(W)
+WEEK ?= $(w)
 
 tag-week:
 ifeq ($(WEEK),)
