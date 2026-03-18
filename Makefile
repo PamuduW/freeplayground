@@ -1,4 +1,4 @@
-.PHONY: hooks qa refresh-tree hadolint qa-full hado qaf
+.PHONY: hooks qa refresh-tree hadolint qa-full hado qaf tag-week tgw
 
 PYTHON ?= python3
 VENV ?= .venv
@@ -31,6 +31,15 @@ hadolint: $(PRE_COMMIT)
 
 qa-full: qa hadolint
 
+WEEK ?= $(W)
+
+tag-week:
+ifeq ($(WEEK),)
+	$(error Usage: make tag-week WEEK=NN  (or: make tgw W=NN))
+endif
+	@10-automation-scripts/tag-week.sh $(WEEK)
+
 # Backward-compatible aliases.
 hado: hadolint
 qaf: qa-full
+tgw: tag-week

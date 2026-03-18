@@ -19,7 +19,7 @@ A weekly proof-of-work path toward DevOps -> Kubernetes -> CI mastery -> DevSecO
 - A Draft merge request to main is opened at the start of the week.
 - All week work is committed to the week branch.
 - End of week: the MR is merged into main using a merge commit (no squash).
-- After merge: the week branch is deleted.
+- Week branches are kept after merge (not deleted).
 - Optional: a tag week-NN is created on the merge commit.
 
 ## Recommended repo structure (full showcase layout to grow into)

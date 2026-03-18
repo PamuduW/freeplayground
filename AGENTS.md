@@ -20,8 +20,7 @@ This is my proof-of-work lab repo for DevSecOps / Cloud Security learning and ho
 - A Draft merge request to `main` is opened at the start of the week.
 - All week work is committed to the week branch.
 - End of week: merge the MR into `main` with a merge commit.
-- After merge: delete the week branch.
-- Optional: tag `week-NN` on the merge commit.
+- After merge: tag the merge commit with `make tag-week WEEK=NN` (alias: `make tgw W=NN`).
 - Weekly log includes the branch name and MR link under Evidence.
 
 ## Where to log work

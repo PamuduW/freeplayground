@@ -23,7 +23,9 @@ freeplayground (root)
 ├── 10-automation-scripts
 │   ├── quality
 │   │   ├── README.md
+│   │   ├── check_prev_week_tag.sh
 │   │   └── strip_md_heading_blank_lines.py
+│   ├── tag-week.sh
 │   └── update-tree.sh
 ├── AGENTS.md
 ├── CHANGELOG.md

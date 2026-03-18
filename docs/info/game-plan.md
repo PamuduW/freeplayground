@@ -17,8 +17,8 @@ The goal is consistent growth across DevOps fundamentals, cloud, automation, and
 - I create a new branch for each week: `week/NN-short-theme` (for example: `week/02-docker`).
 - I open a Draft merge request to `main` at the start of the week, and push commits to the week branch as work progresses.
 - At the end of the week, I merge the MR into `main` using a **merge commit** (so the full week history stays visible on `main`).
-- I delete the week branch after merge to keep the branch list clean.
-- Optional: I add a lightweight tag `week-NN` on the merge commit so each week is easy to locate later.
+- Week branches are kept after merge (not deleted).
+- I tag the merge commit with `week-NN` (`make tag-week WEEK=NN`) so each week is easy to locate later.
 
 ## Success outcomes (end of 12 months)
 By the end of this plan, this repo should demonstrate:

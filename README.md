@@ -66,7 +66,7 @@ GitLab is the development origin — cloning, branches, merge requests, and CI a
 ## Weekly Git workflow
 - A week branch is created using `week/NN-short-theme`.
 - A Draft merge request to `main` is opened at the start of the week.
-- The week branch is merged to `main` at week end using a merge commit, then the source branch is deleted.
+- The week branch is merged to `main` at week end using a merge commit and tagged with `make tag-week WEEK=NN`.
 
 ## Quality workflow
 - Run `make hooks` once after cloning to install commit hooks.

@@ -31,9 +31,31 @@ I run `make qa` during the week before I push so my branch stays lint-clean.
 `make qa` also refreshes `docs/info/tree.md` automatically.
 I keep the quality workflow reference in `docs/info/linting-formatting-workflow.md`.
 
-## End of week (merge + clean up)
+## End of week (merge + tag + clean up)
 1. Ensure the "must ship" checklist is complete and `docs/weekly/week-NN.md` has evidence.
 2. Merge the MR into `main` using a merge commit.
-3. Delete the source branch after merge.
+3. Tag the merge commit:
 
-Optional: create a tag `week-NN` on the merge commit.
+```bash
+git checkout main
+git pull
+make tag-week WEEK=NN
+```
+
+`make tag-week` creates the `week-NN` tag on HEAD and pushes it to all remotes.
+
+### Forgot to tag before starting the next week?
+If I already branched into `week/(NN+1)-...` without tagging, I can tag from the week branch:
+
+```bash
+make tag-week WEEK=NN
+```
+
+This fetches the latest `main` from origin and tags it. No branch switch needed.
+
+### Safety checks built into `make tag-week`
+- Rejects if `WEEK` is not provided.
+- Rejects if the tag already exists.
+- Rejects if the new tag is not exactly one ahead of the latest week tag (no gaps).
+- On a week branch: rejects if trying to tag the current or future week.
+- A pre-commit hook also blocks commits on `week/NN-...` if `week-(NN-1)` tag is missing.
