@@ -1,10 +1,10 @@
-# Docker fundamentals (Week 02)
+# Docker fundamentals (Week 02 - 03)
 This module covers practical Docker fundamentals used in this repo: building images, running containers, reading logs, managing volumes, and container networking.
 
 In this repo, Docker is used to containerize the sample FastAPI app under `02-docker/app/` and run repeatable local experiments for container lifecycle and operations.
 
 ## Quick workflow
-Run these from repo root unless noted.
+Run these from repo root unless noted. The app works in two modes: **standalone** (file-only visit counting) and **Compose** (Redis-backed counting). The standalone commands below work without Redis.
 
 ### Build
 ```bash
@@ -55,13 +55,27 @@ docker rm -f fp-hello-api       # force-remove the running container
 docker network rm fp-net        # remove the custom network
 ```
 
+## Docker Compose (Week 03)
+With Compose, the app runs as a multi-service stack: FastAPI + Redis. The visit counter is stored in Redis and the `/health` endpoint reports Redis connectivity. Without Compose, the app falls back to in-memory counting and `/health` reports `redis: "not configured"`.
+
+### Quick start
+```bash
+cd 02-docker/app
+docker compose up -d --build
+# visit http://localhost:8000/ — each request increments the Redis counter
+# visit http://localhost:8000/health — shows app + Redis status
+docker compose down
+```
+
 ## Module docs map
 - `info/_index.md` - navigation for module docs.
 - `info/core-docker.md` - detailed commands, flags, workflow, and troubleshooting for day-to-day Docker usage.
 - `info/multistage-docker.md` - multistage Dockerfile pattern used in this module and when to apply it.
+- `info/docker-compose.md` - Compose workflow, healthchecks, restart policies, and debugging common failures.
 
 ## App location
 - `app/Dockerfile`
 - `app/Dockerfile.multistage`
+- `app/docker-compose.yml`
 - `app/main.py`
 - `app/requirements.txt`

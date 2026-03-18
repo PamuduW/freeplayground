@@ -3,7 +3,7 @@
 This is my proof-of-work lab repo for DevSecOps / Cloud Security learning and homelab experiments.
 
 ## Source of truth for the plan
-- Weekly plan: `docs/info/FreePlayground_Game_Plan_v3.md`
+- Weekly plan: `docs/info/FreePlayground_Game_Plan.md`
 
 ## Non-negotiables
 - Weeks are tracked by number only (Week 01, Week 02, ...). A week starts Monday and ends Sunday. No real dates in weekly logs.
@@ -20,8 +20,7 @@ This is my proof-of-work lab repo for DevSecOps / Cloud Security learning and ho
 - A Draft merge request to `main` is opened at the start of the week.
 - All week work is committed to the week branch.
 - End of week: merge the MR into `main` with a merge commit.
-- After merge: delete the week branch.
-- Optional: tag `week-NN` on the merge commit.
+- After merge: tag the merge commit with `make tag-week WEEK=NN` (alias: `make tgw W=NN`).
 - Weekly log includes the branch name and MR link under Evidence.
 
 ## Where to log work
@@ -55,6 +54,18 @@ This is my proof-of-work lab repo for DevSecOps / Cloud Security learning and ho
 - I use `/compact` after long sessions to keep context lean.
 - I check `docs/info/tree.md` for a quick view of the current folder structure before planning larger edits.
 
+## App ownership and backward compatibility
+- `02-docker/app/` is the Docker/Compose learning artifact. It stays mostly frozen after the Docker phase (Weeks 02-03). Minor backward-compatible changes are fine, but it should not become the target of K8s manifests, CI pipelines, or security scans in later weeks.
+- `11-backend-lab/` is the evolving anchor app. When K8s, CI, and security phases begin, that app is the one that gets Helm charts, pipeline jobs, image scanning, etc.
+- Module docs are local to their phase. `02-docker/info/` documents Docker concepts as of Weeks 02-03 and does not need to track changes made in later phases.
+- When adding new features to the app (e.g. a new dependency), the change must be backward-compatible: existing standalone Docker commands in older module docs must still work without modification.
+- If a code change would break an older module's workflow, either make the change backward-compatible (graceful fallback) or put the new behavior in a separate app/module.
+
 ## Teardown discipline (cloud labs)
 - After any cloud lab, I verify resources are deleted and cost impact is 0.
 - I keep a short teardown checklist in the week log.
+
+## Full repo check
+- Last full check commit: `37edf98` (Week 03 close)
+- What the check covers: placeholder/unfilled text in docs (`<link>`, `(update with ...)`, `img-YY`, unchecked boxes in completed weeks), missing weekly log links in root README, stale titles/headings, tree.md accuracy, broken internal links, CHANGELOG.md completeness (all weeks represented), game-plan.md current status accuracy, weekly-workflow.md example commands matching actual remote setup, module README week ranges matching content.
+- When I ask for a full check, only scan files changed since this commit (`git diff --name-only <hash>..HEAD`). After the check, update this commit hash.
