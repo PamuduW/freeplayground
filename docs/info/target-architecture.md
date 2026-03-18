@@ -1,6 +1,6 @@
 # Target architecture
 This doc describes the end-state CI/CD ecosystem I am building across FreePlayground.
-It is the north-star reference; the week-by-week plan lives in `FreePlayground_Game_Plan_v3.md`.
+It is the north-star reference; the week-by-week plan lives in `FreePlayground_Game_Plan.md`.
 
 ## Pipeline flow (end state)
 ```text

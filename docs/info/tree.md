@@ -31,7 +31,7 @@ freeplayground (root)
 ├── README.md
 ├── docs
 │   ├── info
-│   │   ├── FreePlayground_Game_Plan_v3.md
+│   │   ├── FreePlayground_Game_Plan.md
 │   │   ├── _template.md
 │   │   ├── game-plan.md
 │   │   ├── linting-formatting-workflow.md

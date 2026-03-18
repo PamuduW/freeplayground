@@ -3,7 +3,7 @@
 This is my proof-of-work lab repo for DevSecOps / Cloud Security learning and homelab experiments.
 
 ## Source of truth for the plan
-- Weekly plan: `docs/info/FreePlayground_Game_Plan_v3.md`
+- Weekly plan: `docs/info/FreePlayground_Game_Plan.md`
 
 ## Non-negotiables
 - Weeks are tracked by number only (Week 01, Week 02, ...). A week starts Monday and ends Sunday. No real dates in weekly logs.

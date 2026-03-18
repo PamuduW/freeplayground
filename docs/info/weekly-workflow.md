@@ -16,7 +16,7 @@ GitLab mirroring pushes the branch to GitHub automatically.
 
 ## Start of week (create the week log)
 - Create `docs/weekly/week-NN.md` using `docs/info/_template.md` as the base.
-- Fill Goal + Must ship + Stretch based on `docs/info/FreePlayground_Game_Plan_v3.md`.
+- Fill Goal + Must ship + Stretch based on `docs/info/FreePlayground_Game_Plan.md`.
 
 ## During week (work normally)
 ```bash
