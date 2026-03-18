@@ -44,6 +44,13 @@ A weekly proof-of-work path toward DevOps -> Kubernetes -> CI mastery -> DevSecO
 | AWS Cloud Practitioner      | Cloud baseline before deeper AWS labs          | Week 17 - Week 20   | Week 20 - Week 22  |
 | Terraform Associate         | Directly overlaps IaC phase                    | Week 21 - Week 24   | Week 24 - Week 26  |
 
+## Live project add-on
+A personal portfolio site deployed through the FreePlayground pipeline, giving the CI/CD ecosystem real commits, real uptime, and real consequence. Full details in [docs/info/live-project-idea.md](live-project-idea.md).
+
+- **Phase B (Weeks 05-08):** scaffold the app in `11-backend-lab/` and deploy it locally as the first K8s workload.
+- **Phase C (Weeks 09-12):** wire CI to build/push the image; deploy via CD job.
+- **Phase D onward:** add scanning, GitOps repo split, monitoring, and hardening with the site as the live target.
+
 ## Phase order (updated)
 - Phase A (Weeks 01 - 04): Foundations (repo + Linux + Git + Docker)
 - Phase B (Weeks 05 - 08): Kubernetes core (incl. Helm intro)
