@@ -59,5 +59,5 @@ This `game-plan.md` file is the living index and will be updated if the plan is 
 
 ## Current status
 - Logs exist for Week 01, Week 02, and Week 03 under `docs/weekly/`.
-- Week 03 (Docker Compose) is in progress on branch `week/03-docker-compose`.
+- Week 03 (Docker Compose) is closing on branch `week/03-docker-compose`.
 - Next planned: Week 04 (Linux + scripting day-to-day), per `docs/info/FreePlayground_Game_Plan.md`.
