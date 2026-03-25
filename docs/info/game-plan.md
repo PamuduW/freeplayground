@@ -38,6 +38,9 @@ Weekly notes live in:
 - `docs/weekly/week-XX.md`
 - `docs/info/tree.md` (quick current folder structure snapshot)
 
+Learning notes live in:
+- `docs/learn/` (conceptual deep-dives, one file per topic)
+
 Reference docs live in:
 - `docs/info/`
 - `<module>/info/` for module-specific notes (for example: `02-docker/info/`)

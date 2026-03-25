@@ -26,6 +26,7 @@ This is my proof-of-work lab repo for DevSecOps / Cloud Security learning and ho
 ## Where to log work
 - Weekly logs live under `docs/weekly/week-XX.md`.
 - Weekly evidence images live under `docs/weekly/images/week-XX/` with week-based naming.
+- Conceptual learning notes live under `docs/learn/` (one file per topic, not per week).
 - Repo-level reference docs live under `docs/info/`.
 - Module-level reference docs live under each module's `info/` folder.
 

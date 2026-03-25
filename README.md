@@ -28,6 +28,7 @@ Current module folders:
 
 Other repo areas:
 - `docs/weekly/` - weekly notes and progress receipts
+- `docs/learn/` - conceptual deep-dives written while working through each topic
 - `docs/info/` - repo-level plan, workflow notes, and templates
 - `*/info/` - module-specific notes and runbooks (for example: `02-docker/info/`)
 - `docs/info/tree.md` - latest quick snapshot of repo folder structure

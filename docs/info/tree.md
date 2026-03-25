@@ -41,6 +41,11 @@ freeplayground (root)
 │   │   ├── target-architecture.md
 │   │   ├── tree.md
 │   │   └── weekly-workflow.md
+│   ├── learn
+│   │   ├── _index.md
+│   │   ├── docker-compose.md
+│   │   ├── docker.md
+│   │   └── linting.md
 │   └── weekly
 │       ├── images
 │       │   ├── week-01
