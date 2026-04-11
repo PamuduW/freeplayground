@@ -242,7 +242,13 @@ run_report() {
 }
 
 if [ -n "$OUT_FILE" ]; then
-  run_report >"$OUT_FILE"
+  OUT_DIR=$(dirname -- "$OUT_FILE")
+  if [ "$OUT_DIR" != "." ] && [ ! -d "$OUT_DIR" ]; then
+    mkdir -p -- "$OUT_DIR" || die "could not create output directory: $OUT_DIR"
+  fi
+  if ! run_report >"$OUT_FILE"; then
+    die "could not write report to $OUT_FILE"
+  fi
   info "Wrote report to $OUT_FILE"
 else
   run_report

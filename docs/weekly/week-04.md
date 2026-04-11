@@ -27,22 +27,27 @@ Ship foundational Linux notes (permissions, systemd, networking) and 5 reusable 
 - `df -P` (POSIX output) avoids line wrapping on long mount paths, making it safe to parse in scripts.
 
 ## Notes / commands / snippets
+Gotchas when rerunning the scripts:
+
+- Use `temp/`, not `/temp`.
+- `health-check.sh` defaults to `sshd,docker`, so on my machine I should pass `--services docker` unless I explicitly want to check `sshd`.
+
 Commands I ran that matter:
 
 ```bash
 # Quick health check
-10-automation-scripts/health-check.sh
-10-automation-scripts/health-check.sh disk memory --warn-disk 90
-10-automation-scripts/health-check.sh --json
+10-automation-scripts/health-check.sh --services docker
+10-automation-scripts/health-check.sh disk memory --warn-disk 90 --services docker
+10-automation-scripts/health-check.sh --json --services docker
 
 # System report in markdown
-10-automation-scripts/report.sh -f markdown -o /tmp/sysreport.md
+10-automation-scripts/report.sh -f markdown -o temp/sysreport.md
 
 # Backup a directory
-10-automation-scripts/backup.sh -o /tmp 01-foundations/
+10-automation-scripts/backup.sh -o temp 01-foundations/
 
 # Dry-run cleanup
-10-automation-scripts/cleanup.sh -n -d 7 /tmp
+10-automation-scripts/cleanup.sh -n -d 7 temp
 
 # Search logs
 10-automation-scripts/log-grep.sh -i "error"

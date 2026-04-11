@@ -70,6 +70,7 @@ GitLab is the development origin — cloning, branches, merge requests, and CI a
 - The week branch is merged to `main` at week end using a merge commit and tagged with `make tag-week WEEK=NN`.
 
 ## Quality workflow
+- Node-based hooks use the system `node` and `npm`, so both need to be available on `PATH`.
 - Run `make hooks` once after cloning to install commit hooks.
 - Run `make qa` before pushing or opening merge requests.
 - `pre-commit` runs automatically on each commit.

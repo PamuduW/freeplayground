@@ -55,6 +55,7 @@ freeplayground (root)
 │   │   └── weekly-workflow.md
 │   ├── learn
 │   │   ├── _index.md
+│   │   ├── automation-scripts.md
 │   │   ├── docker-compose.md
 │   │   ├── docker.md
 │   │   └── linting.md

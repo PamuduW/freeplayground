@@ -82,7 +82,7 @@ Uses the venv's own pip to install the `pre-commit` package (and its dependencie
 Dependencies installed alongside pre-commit (visible in lint.log):
 - `cfgv` — config file validator (pre-commit uses it to validate `.pre-commit-config.yaml`)
 - `identify` — file type identification (how pre-commit knows a file is Python vs Shell vs YAML)
-- `nodeenv` — creates isolated Node.js environments (needed for hooks like prettier and markdownlint)
+- `nodeenv` — bridges Node-based hooks to the configured Node runtime; in this repo I force `language_version: system` so the hooks use my installed `node`/`npm` instead of downloading a separate Node release
 - `pyyaml` — YAML parser (pre-commit reads YAML configs)
 - `virtualenv` — creates isolated environments for hook dependencies
 
@@ -98,7 +98,7 @@ This does two things:
    [INFO] Once installed this environment will be reused.
    [INFO] This may take a few minutes...
    ```
-   Each hook repo gets its own isolated environment under `.cache/pre-commit/`. For example, ruff gets a Python env with the ruff binary, markdownlint gets a Node.js env, etc.
+   Each hook repo gets its own isolated environment under `.cache/pre-commit/`. For example, ruff gets a Python env with the ruff binary, while Node-based hooks are wired against my system `node`/`npm`.
 
 ## What happens when I type `git commit`
 Here is the exact sequence:
@@ -205,6 +205,7 @@ When triggered by `git commit`, pre-commit only checks files that are in the sta
 - What: lints Markdown files for formatting issues (heading style, list indentation, blank lines, HTML usage, etc.)
 - Config: `.markdownlint-cli2.yaml`
 - `pass_filenames: false` — don't pass individual filenames; instead markdownlint-cli2 uses the `globs` key in its config to find files itself
+- Runtime: this repo forces Node hooks to `language_version: system`, so `markdownlint-cli2` uses the `node` and `npm` already on my `PATH`
 - Current disabled rules:
   - `MD013: false` — line length (disabled, same reason as yamllint)
   - `MD022: false` — headings should be surrounded by blank lines (conflicts with the custom strip script)
@@ -222,7 +223,7 @@ When triggered by `git commit`, pre-commit only checks files that are in the sta
 **prettier**
 - What: an opinionated code formatter. In this repo, it only runs on `.yml`, `.yaml`, and `.json` files (the `files:` regex limits scope)
 - `--write`: rewrite files in place (auto-fix mode)
-- `language: node` tells pre-commit this hook needs Node.js. Pre-commit uses `nodeenv` to create an isolated Node environment and installs `prettier@3.3.3` into it
+- `language: node` tells pre-commit this hook needs Node.js. In this repo, `default_language_version.node=system` makes pre-commit use my installed `node`/`npm` instead of downloading a separate Node runtime
 - Auto-fixes: yes
 - Example: reformats YAML indentation, normalizes JSON key quoting/spacing
 
@@ -249,8 +250,12 @@ The central config. Defines which hooks run, from which repos, at which versions
 
 ```yaml
 default_stages: [pre-commit]
+default_language_version:
+  node: system
 ```
 Only run hooks at the `pre-commit` stage by default (i.e., on `git commit`). Other possible stages: `pre-push`, `commit-msg`, `manual`.
+
+`default_language_version.node: system` is important in this repo because my `node` and `npm` already exist on the machine. That tells pre-commit to use the system Node toolchain for Node-based hooks instead of provisioning a separate Node runtime.
 
 ```yaml
 repos:
@@ -270,7 +275,7 @@ Each `repo` block points to a git repository containing hook definitions. `rev` 
         additional_dependencies:
           - prettier@3.3.3
 ```
-`repo: local` means the hook is defined inline (not from an external repo). `language: node` tells pre-commit to create a Node.js environment. `entry: prettier` is the command to run. `additional_dependencies` lists npm packages to install in that Node environment.
+`repo: local` means the hook is defined inline (not from an external repo). `language: node` tells pre-commit this hook depends on Node tooling. `entry: prettier` is the command to run. `additional_dependencies` lists npm packages to install for that hook. Because the repo sets `default_language_version.node: system`, those installs happen against the system Node toolchain instead of a separately downloaded Node version.
 
 ### `pyproject.toml`
 Ruff's configuration. Not all tools use this — only tools that read `pyproject.toml` (ruff, black, mypy, pytest, etc.).
@@ -409,11 +414,11 @@ hadolint: $(PRE_COMMIT)
 ├── repo1abc123/          ← cloned pre-commit-hooks repo + its venv
 ├── repo2def456/          ← cloned ruff-pre-commit repo + its binary
 ├── repo3ghi789/          ← cloned shellcheck repo + its binary
-├── node_env_xyz/         ← Node.js env for prettier/markdownlint
+├── repo4jkl012/          ← cached Node-hook repo metadata / install state
 └── ...
 ```
 
-Each hook repo gets its own isolated environment. `PRE_COMMIT_HOME` controls where these live. This repo sets it to `.cache/pre-commit/` (inside the repo, git-ignored) instead of the default `~/.cache/pre-commit` (user home). This keeps everything self-contained.
+Each hook repo gets its own cached area. `PRE_COMMIT_HOME` controls where these live. This repo sets it to `.cache/pre-commit/` (inside the repo, git-ignored) instead of the default `~/.cache/pre-commit` (user home). This keeps everything self-contained while still letting Node-based hooks rely on the system-installed `node`/`npm`.
 
 ## Recreating everything from scratch
 If `.venv/` or `.cache/` get corrupted or deleted:
@@ -427,9 +432,10 @@ This recreates the venv, reinstalls pre-commit, and re-downloads all hook enviro
 ### First time setup
 ```text
 make hooks
-  → python3 -m venv .venv                          # create isolated Python env
+  → check node and npm are on PATH                  # required for markdownlint-cli2 / prettier
+  → python3 -m venv .venv                           # create isolated Python env
   → .venv/bin/pip install pre-commit                # install pre-commit into it
-  → .venv/bin/pre-commit install --install-hooks    # wire git hook + download all hook envs
+  → .venv/bin/pre-commit install --install-hooks    # wire git hook + install hook envs
 ```
 
 ### Every commit
