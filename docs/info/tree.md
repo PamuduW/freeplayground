@@ -6,6 +6,13 @@ freeplayground (root)
 ├── .pre-commit-config.yaml
 ├── .prettierignore
 ├── .yamllint
+├── 01-foundations
+│   ├── README.md
+│   └── info
+│       ├── _index.md
+│       ├── networking-basics.md
+│       ├── permissions.md
+│       └── systemd-basics.md
 ├── 02-docker
 │   ├── README.md
 │   ├── app
@@ -21,10 +28,15 @@ freeplayground (root)
 │       ├── docker-compose.md
 │       └── multistage-docker.md
 ├── 10-automation-scripts
+│   ├── backup.sh
+│   ├── cleanup.sh
+│   ├── health-check.sh
+│   ├── log-grep.sh
 │   ├── quality
 │   │   ├── README.md
 │   │   ├── check_prev_week_tag.sh
 │   │   └── strip_md_heading_blank_lines.py
+│   ├── report.sh
 │   ├── tag-week.sh
 │   └── update-tree.sh
 ├── AGENTS.md
@@ -61,5 +73,6 @@ freeplayground (root)
 │       ├── week-01.md
 │       ├── week-02-addon-01.md
 │       ├── week-02.md
-│       └── week-03.md
+│       ├── week-03.md
+│       └── week-04.md
 └── pyproject.toml
