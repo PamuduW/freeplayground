@@ -23,6 +23,7 @@ Each week ends with a shippable outcome: a commit, documentation, and repeatable
 
 ## Repo map
 Current module folders:
+- `01-foundations/` - Linux day-to-day reference notes for permissions, systemd, networking, and shell basics
 - `02-docker/` - Docker labs and Compose demos
 - `10-automation-scripts/` - reusable scripts and mini tools
 
@@ -34,7 +35,6 @@ Other repo areas:
 - `docs/info/tree.md` - latest quick snapshot of repo folder structure
 
 ## Planned modules map
-- `01-foundations/` - Linux, networking basics, scripting notes
 - `02-docker/` - Docker labs and Compose demos (current)
 - `03-ci-cd/` - GitLab CI patterns and examples
 - `04-security-ci/` - security in CI experiments
@@ -51,6 +51,7 @@ Other repo areas:
 - [Week 02](docs/weekly/week-02.md)
 - [Week 02 Add-on 01 (linting/formatting)](docs/weekly/week-02-addon-01.md)
 - [Week 03](docs/weekly/week-03.md)
+- [Week 04](docs/weekly/week-04.md)
 
 ## Repo links and hosting
 - **GitLab (primary):** https://gitlab.com/PamuduW/freeplayground

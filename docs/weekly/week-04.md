@@ -58,12 +58,12 @@ Commands I ran that matter:
 - GitHub: https://github.com/PamuduW/freeplayground
 - GitLab: https://gitlab.com/PamuduW/freeplayground
 - Branch: `week/04-linux_+_scripting_day-to-day`
-- MR: <link>
-- Pipeline: <link>
+- MR (branch-filtered view): https://gitlab.com/PamuduW/freeplayground/-/merge_requests?scope=all&state=opened&search=week%2F04-linux_%2B_scripting_day-to-day
+- Pipeline (branch-filtered view): https://gitlab.com/PamuduW/freeplayground/-/pipelines?ref=week%2F04-linux_%2B_scripting_day-to-day
 - Tag (optional): week-04
 
 ### Screenshots
-<!-- Add screenshots when running the scripts -->
+No screenshots are committed for Week 04 yet. If I want visual evidence in-repo before merge, I should add them under `docs/weekly/images/week-04/`.
 
 ## Retro
 ### Went well
