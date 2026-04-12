@@ -76,4 +76,4 @@ Commands I ran that matter:
 - Scripts are not tested with a formal test framework (e.g., bats-core) — adding that would increase confidence.
 
 ### Next week adjustment (scope can change, outcome stays)
-- Week 05 starts Kubernetes basics (local cluster, deploy an app + service).
+- Week 05 shifts to the internship checkpoint (portfolio index + CV refresh draft), and Kubernetes basics moves to Week 06.

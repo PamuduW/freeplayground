@@ -40,20 +40,20 @@ A weekly proof-of-work path toward DevOps -> Kubernetes -> CI mastery -> DevSecO
 | Certificate                 | Why it fits                                    | Prep window (weeks) | Exam target (week) |
 | --------------------------- | ---------------------------------------------- | ------------------- | ------------------ |
 | AZ-900 (Azure Fundamentals) | Cloud vocabulary + billing concepts early      | Week 02 - Week 04   | Week 04 - Week 05  |
-| CKA (Kubernetes)            | Aligns with Kubernetes + troubleshooting phase | Week 05 - Week 12   | Week 12 - Week 14  |
+| CKA (Kubernetes)            | Aligns with Kubernetes + troubleshooting phase | Week 06 - Week 12   | Week 12 - Week 14  |
 | AWS Cloud Practitioner      | Cloud baseline before deeper AWS labs          | Week 17 - Week 20   | Week 20 - Week 22  |
 | Terraform Associate         | Directly overlaps IaC phase                    | Week 21 - Week 24   | Week 24 - Week 26  |
 
 ## Live project add-on
 A personal portfolio site deployed through the FreePlayground pipeline, giving the CI/CD ecosystem real commits, real uptime, and real consequence. Full details in [docs/info/live-project-idea.md](live-project-idea.md).
 
-- **Phase B (Weeks 05-08):** scaffold the app in `11-backend-lab/` and deploy it locally as the first K8s workload.
+- **Phase B (Weeks 06-08):** scaffold the app in `11-backend-lab/` and deploy it locally as the first K8s workload.
 - **Phase C (Weeks 09-12):** wire CI to build/push the image; deploy via CD job.
 - **Phase D onward:** add scanning, GitOps repo split, monitoring, and hardening with the site as the live target.
 
 ## Phase order (updated)
 - Phase A (Weeks 01 - 04): Foundations (repo + Linux + Git + Docker)
-- Phase B (Weeks 05 - 08): Kubernetes core (incl. Helm intro)
+- Phase B (Weeks 05 - 08): Internship checkpoint + Kubernetes core ramp-up
 - Phase C (Weeks 09 - 12): CI/CD mastery (GitLab CI focus)
 - Phase D (Weeks 13 - 16): DevSecOps in CI (secure pipelines)
 - Phase E (Weeks 17 - 20): Observability (metrics/logs/tracing)
@@ -113,19 +113,7 @@ A personal portfolio site deployed through the FreePlayground pipeline, giving t
 
 **Proof to capture:** links, screenshots, commands, and a short retro in docs/weekly/week-04.md.
 
-### Week 05 - Kubernetes basics
-**Must ship**
-
-- Local cluster (kind/minikube/k3s).
-- Deploy a simple app + service.
-
-**Stretch**
-
-- Ingress + DNS notes.
-
-**Proof to capture:** links, screenshots, commands, and a short retro in docs/weekly/week-05.md.
-
-### Week 06 - Internship deadline week
+### Week 05 - Internship deadline week
 **Must ship**
 
 - Portfolio checkpoint: README index linking 4 pillars (even if incomplete).
@@ -134,6 +122,18 @@ A personal portfolio site deployed through the FreePlayground pipeline, giving t
 **Stretch**
 
 - 2 mock interview stories (STAR format).
+
+**Proof to capture:** links, screenshots, commands, and a short retro in docs/weekly/week-05.md.
+
+### Week 06 - Kubernetes basics
+**Must ship**
+
+- Local cluster (kind/minikube/k3s).
+- Deploy a simple app + service.
+
+**Stretch**
+
+- Ingress + DNS notes.
 
 **Proof to capture:** links, screenshots, commands, and a short retro in docs/weekly/week-06.md.
 

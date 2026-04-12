@@ -63,4 +63,4 @@ This `game-plan.md` file is the living index and will be updated if the plan is 
 ## Current status
 - Logs exist for Week 01, Week 02, Week 03, and Week 04 under `docs/weekly/`.
 - Week 04 (Linux + scripting day-to-day) is closing on branch `week/04-linux_+_scripting_day-to-day`.
-- Next planned: Week 05 (Kubernetes basics), per `docs/info/FreePlayground_Game_Plan.md`.
+- Next planned: Week 05 (Internship deadline week), per `docs/info/FreePlayground_Game_Plan.md`.

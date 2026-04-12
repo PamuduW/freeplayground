@@ -72,7 +72,7 @@ For a real K8s deploy target, **Oracle Cloud free tier** is the strongest option
 
 ## When to start
 - **Not now.** Current focus is Phase A (foundations + Docker + Compose).
-- **Phase B (Weeks 05-08):** set up local K8s cluster. Deploy the site locally as the first real workload.
+- **Phase B (Weeks 06-08):** set up local K8s cluster. Deploy the site locally as the first real workload.
 - **Phase C (Weeks 09-12):** wire the CI pipeline to build and push the image. Deploy via CD job.
 - **Phase D onward:** add scanning, GitOps split, monitoring, and hardening with the site as the live target.
 
