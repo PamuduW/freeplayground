@@ -6,6 +6,13 @@ freeplayground (root)
 ├── .pre-commit-config.yaml
 ├── .prettierignore
 ├── .yamllint
+├── 01-foundations
+│   ├── README.md
+│   └── info
+│       ├── _index.md
+│       ├── networking-basics.md
+│       ├── permissions.md
+│       └── systemd-basics.md
 ├── 02-docker
 │   ├── README.md
 │   ├── app
@@ -21,10 +28,15 @@ freeplayground (root)
 │       ├── docker-compose.md
 │       └── multistage-docker.md
 ├── 10-automation-scripts
+│   ├── backup.sh
+│   ├── cleanup.sh
+│   ├── health-check.sh
+│   ├── log-grep.sh
 │   ├── quality
 │   │   ├── README.md
 │   │   ├── check_prev_week_tag.sh
 │   │   └── strip_md_heading_blank_lines.py
+│   ├── report.sh
 │   ├── tag-week.sh
 │   └── update-tree.sh
 ├── AGENTS.md
@@ -41,6 +53,12 @@ freeplayground (root)
 │   │   ├── target-architecture.md
 │   │   ├── tree.md
 │   │   └── weekly-workflow.md
+│   ├── learn
+│   │   ├── _index.md
+│   │   ├── automation-scripts.md
+│   │   ├── docker-compose.md
+│   │   ├── docker.md
+│   │   └── linting.md
 │   └── weekly
 │       ├── images
 │       │   ├── week-01
@@ -50,11 +68,14 @@ freeplayground (root)
 │       │   │   ├── week-02-addon-01-img-01.png
 │       │   │   ├── week-02-img-01.png
 │       │   │   └── week-02-img-02.png
-│       │   └── week-03
-│       │       ├── week-03-img-01.png
-│       │       └── week-03-img-02.png
+│       │   ├── week-03
+│       │   │   ├── week-03-img-01.png
+│       │   │   └── week-03-img-02.png
+│       │   └── week-04
+│       │       └── week-04-img-01.png
 │       ├── week-01.md
 │       ├── week-02-addon-01.md
 │       ├── week-02.md
-│       └── week-03.md
+│       ├── week-03.md
+│       └── week-04.md
 └── pyproject.toml

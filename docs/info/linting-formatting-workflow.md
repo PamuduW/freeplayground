@@ -14,11 +14,17 @@ make hadolint
 make qa-full
 ```
 
+## Local prerequisites
+- `python3` for the repo-local `.venv` and `pre-commit`
+- `node` and `npm` on `PATH` for the Node-based hooks (`markdownlint-cli2` and `prettier`)
+
 ## What each command does
-- `make hooks`: installs the git pre-commit hook and prepares hook environments.
-- `make qa`: refreshes `docs/info/tree.md` via `10-automation-scripts/update-tree.sh`, runs all hooks across all files, allows auto-fixes on pass 1, then re-runs on pass 2 to confirm clean.
+- `make hooks`: checks that `node` and `npm` are available, installs the git pre-commit hook, and prepares hook environments.
+- `make qa`: checks that `node` and `npm` are available, refreshes `docs/info/tree.md` via `10-automation-scripts/update-tree.sh`, runs all hooks across all files, allows auto-fixes on pass 1, then re-runs on pass 2 to confirm clean.
 - `make hadolint`: runs the manual-stage hadolint hook across Dockerfiles.
 - `make qa-full`: runs `make qa` and then `make hadolint`.
+
+`make hooks` ends with a short success message because `pre-commit install --install-hooks` itself does not print a final "done" banner when it succeeds.
 
 ## What runs automatically
 - On commit: pre-commit runs the configured hooks for changed files.
@@ -43,6 +49,8 @@ I normally use `make hadolint` as the short command.
 - YAML: `yamllint` with local `.yamllint` rules.
 - Markdown: `markdownlint-cli2` plus a local heading-spacing normalizer.
 - JSON/YAML formatting: `prettier`.
+
+Node-based hooks are configured to use the system-installed `node`/`npm` instead of asking pre-commit to download a separate Node runtime.
 
 ## Where files live
 - Root config files stay in repo root for simple tool discovery:

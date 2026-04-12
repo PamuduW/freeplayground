@@ -38,6 +38,9 @@ Weekly notes live in:
 - `docs/weekly/week-XX.md`
 - `docs/info/tree.md` (quick current folder structure snapshot)
 
+Learning notes live in:
+- `docs/learn/` (conceptual deep-dives, one file per topic)
+
 Reference docs live in:
 - `docs/info/`
 - `<module>/info/` for module-specific notes (for example: `02-docker/info/`)
@@ -58,6 +61,6 @@ The detailed 12-month weekly plan lives here:
 This `game-plan.md` file is the living index and will be updated if the plan is adjusted.
 
 ## Current status
-- Logs exist for Week 01, Week 02, and Week 03 under `docs/weekly/`.
-- Week 03 (Docker Compose) is closing on branch `week/03-docker-compose`.
-- Next planned: Week 04 (Linux + scripting day-to-day), per `docs/info/FreePlayground_Game_Plan.md`.
+- Logs exist for Week 01, Week 02, Week 03, and Week 04 under `docs/weekly/`.
+- Week 04 (Linux + scripting day-to-day) is closing on branch `week/04-linux_+_scripting_day-to-day`.
+- Next planned: Week 05 (Kubernetes basics), per `docs/info/FreePlayground_Game_Plan.md`.

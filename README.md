@@ -23,17 +23,18 @@ Each week ends with a shippable outcome: a commit, documentation, and repeatable
 
 ## Repo map
 Current module folders:
+- `01-foundations/` - Linux day-to-day reference notes for permissions, systemd, networking, and shell basics
 - `02-docker/` - Docker labs and Compose demos
 - `10-automation-scripts/` - reusable scripts and mini tools
 
 Other repo areas:
 - `docs/weekly/` - weekly notes and progress receipts
+- `docs/learn/` - conceptual deep-dives written while working through each topic
 - `docs/info/` - repo-level plan, workflow notes, and templates
 - `*/info/` - module-specific notes and runbooks (for example: `02-docker/info/`)
 - `docs/info/tree.md` - latest quick snapshot of repo folder structure
 
 ## Planned modules map
-- `01-foundations/` - Linux, networking basics, scripting notes
 - `02-docker/` - Docker labs and Compose demos (current)
 - `03-ci-cd/` - GitLab CI patterns and examples
 - `04-security-ci/` - security in CI experiments
@@ -50,6 +51,7 @@ Other repo areas:
 - [Week 02](docs/weekly/week-02.md)
 - [Week 02 Add-on 01 (linting/formatting)](docs/weekly/week-02-addon-01.md)
 - [Week 03](docs/weekly/week-03.md)
+- [Week 04](docs/weekly/week-04.md)
 
 ## Repo links and hosting
 - **GitLab (primary):** https://gitlab.com/PamuduW/freeplayground
@@ -69,6 +71,7 @@ GitLab is the development origin — cloning, branches, merge requests, and CI a
 - The week branch is merged to `main` at week end using a merge commit and tagged with `make tag-week WEEK=NN`.
 
 ## Quality workflow
+- Node-based hooks use the system `node` and `npm`, so both need to be available on `PATH`.
 - Run `make hooks` once after cloning to install commit hooks.
 - Run `make qa` before pushing or opening merge requests.
 - `pre-commit` runs automatically on each commit.

@@ -11,6 +11,8 @@ ignores:
 
 config:
   default: true
+  MD010:
+    code_blocks: false
   MD013: false
   MD022: false
   MD031: false

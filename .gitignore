@@ -62,3 +62,9 @@ out/
 temp/
 .cursor/
 CLAUDE.md
+.github
+.codex
+
+.github/copilot-instructions.md
+.cursor/rules/bootstrap-skills.mdc
+.cursor/mcp.json

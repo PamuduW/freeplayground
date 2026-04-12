@@ -5,6 +5,9 @@ The format is based on Keep a Changelog, and this project follows SemVer where r
 
 ## [Unreleased]
 ### Added
+- Week 04: Linux + scripting foundations module (`01-foundations/`) with deep-dive notes on permissions, systemd, and networking
+- Week 04: 5 bash utility scripts — `log-grep.sh`, `cleanup.sh`, `backup.sh`, `health-check.sh`, `report.sh` in `10-automation-scripts/`
+- Week 04: `health-check.sh` as a CLI-style tool with `--help`, `--json`, `--no-color`, threshold flags, and modular checks (stretch goal)
 - Week 03: Docker Compose demo (FastAPI + Redis), healthchecks, restart policies, Compose debugging guide (`02-docker/info/docker-compose.md`)
 - Week 03: weekly tagging automation (`make tag-week` / `make tgw`), pre-commit tag check hook, `tag-week.sh` and `check_prev_week_tag.sh` scripts
 - Week 03: moved `live-project-idea.md` to `docs/info/` and added "Live project add-on" section to the game plan
